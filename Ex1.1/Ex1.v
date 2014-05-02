@@ -1,27 +1,9 @@
-`timescale 1ns/1ns
-module mux(a,b,s,y);
+module Ex1(a,b,s,y,leda,ledb,leds);
 	input	a,b,s;
-	output y;
-	wire a,b,s,y;
+	output y,leda,ledb,leds;
+	wire a,b,s,y,leda,ledb,leds;
 	assign y=(~s&&a)||(s&&b);
-endmodule
-
-module test_bench(a,b,s,y);
-	output a,b,s,y;
-	reg a=0,b=0,s=0;
-	wire y;
-	mux tst(.a(a),.b(b),.s(s),.y(y));
-	initial
-	begin
-		#10 s<=0;
-		#10 a<=1;
-		#10 a<=0;
-		#10 b<=1;
-		#10 b<=0;
-		#10 s<=1;
-		#10 a<=1;
-		#10 a<=0;
-		#10 b<=1;
-		#10 b<=0;
-	end
+	assign leda=a;
+	assign ledb=b;
+	assign leds=s;
 endmodule

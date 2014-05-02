@@ -1,0 +1,14 @@
+|Ex1
+a => y~0.IN1
+a => leda.DATAIN
+b => y~1.IN1
+b => ledb.DATAIN
+s => y~1.IN0
+s => leds.DATAIN
+s => y~0.IN0
+y <= y~2.DB_MAX_OUTPUT_PORT_TYPE
+leda <= a.DB_MAX_OUTPUT_PORT_TYPE
+ledb <= b.DB_MAX_OUTPUT_PORT_TYPE
+leds <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+

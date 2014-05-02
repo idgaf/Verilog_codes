@@ -31,3 +31,19 @@ set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:21:51  MAY 02, 2014"
 set_global_assignment -name LAST_QUARTUS_VERSION 7.2
 set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_palace
 set_global_assignment -name VERILOG_FILE Ex2.v
+set_instance_assignment -name PARTITION_HIERARCHY no_file_for_top_partition -to | -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 2147039 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_location_assignment PIN_V13 -to H[6]
+set_location_assignment PIN_V14 -to H[5]
+set_location_assignment PIN_AE11 -to H[4]
+set_location_assignment PIN_AD11 -to H[3]
+set_location_assignment PIN_AC12 -to H[2]
+set_location_assignment PIN_AB12 -to H[1]
+set_location_assignment PIN_AF10 -to H[0]
+set_location_assignment PIN_AE14 -to X[3]
+set_location_assignment PIN_P25 -to X[2]
+set_location_assignment PIN_N26 -to X[1]
+set_location_assignment PIN_N25 -to X[0]
