@@ -1,0 +1,54 @@
+`timescale 1ns/1ns
+module FA(x,y,cin,s,co);
+	input wire x,y,cin;
+	output wire s,co;
+	assign s=~x&&(~y&&cin||y&&~cin)||x&&(y&&cin||~y&&~cin);
+	assign co=(x||y)&&cin||x&&y;
+endmodule
+
+module RippieAdder(a,b,cin,s,cout);
+	input wire [3:0]a;
+	input wire [3:0]b;
+	input wire cin;
+	output wire [3:0]s;
+	output wire cout;
+	wire [2:0]temp;
+	FA fa0(a[0],b[0],cin,s[0],temp[0]);
+	FA fa1(a[1],b[1],temp[0],s[1],temp[1]);
+	FA fa2(a[2],b[2],temp[1],s[2],temp[2]);
+	FA fa3(a[3],b[3],temp[2],s[3],cout);
+endmodule
+
+module testb(a,b,c,s,cout);
+	output reg [3:0]a; 
+	output reg [3:0]b; 
+	output reg [3:0]c; 
+	output wire [3:0]s; 
+	output wire cout; 
+	Adder utt(.a(a),.b(b),.c(c),.s(s),.cout(cout));
+	initial
+	begin
+	a<=7;
+	b<=8;
+	c<=0;
+	end
+endmodule
+
+module main(A,B,CIN,S,COUT,H1,H2,H3);
+	input wire [3:0]A;
+	input wire [3:0]B;
+	input wire CIN;
+	output wire [3:0]S;
+	output wire COUT;
+	output wire [6:0]H1;
+	output wire [6:0]H2;
+	output wire [6:0]H3;
+	SuperAdder(A,B,CIN,S,COUT);
+	translator t0(A,H1);
+	translator t1(B,H2);
+	translator t2(S,H3);
+endmodule
+	
+	
+	
+	 
