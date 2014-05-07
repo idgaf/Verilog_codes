@@ -34,21 +34,3 @@ module testb(a,b,c,s,cout);
 	end
 endmodule
 
-module main(A,B,CIN,S,COUT,H1,H2,H3);
-	input wire [3:0]A;
-	input wire [3:0]B;
-	input wire CIN;
-	output wire [3:0]S;
-	output wire COUT;
-	output wire [6:0]H1;
-	output wire [6:0]H2;
-	output wire [6:0]H3;
-	SuperAdder(A,B,CIN,S,COUT);
-	translator t0(A,H1);
-	translator t1(B,H2);
-	translator t2(S,H3);
-endmodule
-	
-	
-	
-	 

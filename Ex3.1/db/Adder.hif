@@ -59,41 +59,6 @@ d41d8cd98f0b24e980998ecf8427e
 
 # end
 # entity
-main
-# storage
-db|Adder.(0).cnf
-db|Adder.(0).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-Adder.v
-d7f0515232acefe426b8d897fdd4b115
-7
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-}
-# hierarchies {
-|
-}
-# lmf
-..|..|..|..|..|..|altera|72|quartus|lmf|
-d41d8cd98f0b24e980998ecf8427e
-# macro_sequence
-
-# end
-# entity
 SuperAdder
 # storage
 db|Adder.(1).cnf
@@ -120,7 +85,230 @@ IGNORE_VERILOG_INITIAL_CONSTRUCTS
 OFF
 }
 # hierarchies {
-SuperAdder:comb_4
+SuperAdder:u1
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+RippieAdder
+# storage
+db|Adder.(2).cnf
+db|Adder.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Adder.v
+ce37b62c934a61763467e4edf3a68a0
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+RippieAdder:u0
+Subtractor:u2|RippieAdder:comb_8
+Subtractor:u2|RippieAdder:comb_18
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+FA
+# storage
+db|Adder.(4).cnf
+db|Adder.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Adder.v
+ce37b62c934a61763467e4edf3a68a0
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+RippieAdder:u0|FA:fa0
+RippieAdder:u0|FA:fa1
+RippieAdder:u0|FA:fa2
+RippieAdder:u0|FA:fa3
+Subtractor:u2|RippieAdder:comb_8|FA:fa0
+Subtractor:u2|RippieAdder:comb_8|FA:fa1
+Subtractor:u2|RippieAdder:comb_8|FA:fa2
+Subtractor:u2|RippieAdder:comb_8|FA:fa3
+Subtractor:u2|RippieAdder:comb_18|FA:fa0
+Subtractor:u2|RippieAdder:comb_18|FA:fa1
+Subtractor:u2|RippieAdder:comb_18|FA:fa2
+Subtractor:u2|RippieAdder:comb_18|FA:fa3
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+MUX3bit3to1
+# storage
+db|Adder.(5).cnf
+db|Adder.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+MUX.v
+e24adefbf331c7b6356654eccb52a5f
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+MUX3bit3to1:comb_54
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+MUX1bit3to1
+# storage
+db|Adder.(6).cnf
+db|Adder.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+MUX.v
+e24adefbf331c7b6356654eccb52a5f
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+MUX1bit3to1:comb_55
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+Subtractor
+# storage
+db|Adder.(7).cnf
+db|Adder.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Subtractor.v
+9adb9e60a8ff358eadf7ded2bc19bb57
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+Subtractor:u2
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+main
+# storage
+db|Adder.(0).cnf
+db|Adder.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+main.v
+aee6ee02d9bdfb78b681299d13a251
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+|
 }
 # lmf
 ..|..|..|..|..|..|altera|72|quartus|lmf|

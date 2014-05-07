@@ -1,39 +1,3 @@
-`timescale 1ns/1ns
-module FA(x,y,cin,s,co);
-	input wire x,y,cin;
-	output wire s,co;
-	assign s=~x&&(~y&&cin||y&&~cin)||x&&(y&&cin||~y&&~cin);
-	assign co=(x||y)&&cin||x&&y;
-endmodule
-
-module RippieAdder(a,b,cin,s,cout);
-	input wire [3:0]a;
-	input wire [3:0]b;
-	input wire cin;
-	output wire [3:0]s;
-	output wire cout;
-	wire [2:0]temp;
-	FA fa0(a[0],b[0],cin,s[0],temp[0]);
-	FA fa1(a[1],b[1],temp[0],s[1],temp[1]);
-	FA fa2(a[2],b[2],temp[1],s[2],temp[2]);
-	FA fa3(a[3],b[3],temp[2],s[3],cout);
-endmodule
-
-module testb(a,b,c,s,cout);
-	output reg [3:0]a; 
-	output reg [3:0]b; 
-	output reg [3:0]c; 
-	output wire [3:0]s; 
-	output wire cout; 
-	Adder utt(.a(a),.b(b),.c(c),.s(s),.cout(cout));
-	initial
-	begin
-	a<=7;
-	b<=8;
-	c<=0;
-	end
-endmodule
-
 module main(H0,H1,H2,H3,H4,H5,H6,H7,SW,KEY,LED);
 	input wire [3:0]KEY;
 	input wire [17:0]SW;
@@ -66,7 +30,13 @@ module main(H0,H1,H2,H3,H4,H5,H6,H7,SW,KEY,LED);
 	assign LED[17]=SW[17];
 	assign LED[16]=SW[16];
 	//PROGRAM START
-	
+	wire [14:0]temp;
+	RippieAdder u0(A,B,CIN,temp[3:0],temp[4]);
+	SuperAdder u1(A,B,CIN,temp[8:5],temp[9]);
+	Subtractor u2(A,B,temp[13:10],temp[14]);
+	MUX3bit3to1(temp[3:0],temp[8:5],temp[13:10],SW[17:16],S);
+	MUX1bit3to1(temp[4],temp[9],temp[14],SW[17:16],COUT);
+	assign H1[6]=~(SW[17]&&~COUT);
 	//OUTPUTDISPLAY
 	translator t0(SW[3:0],H4);
 	translator t1(SW[7:4],H6);
