@@ -1,0 +1,4 @@
+Warning (10236): Verilog HDL Implicit Net warning at Dflipflop.v(4): created implicit net for "L1"
+Warning (10236): Verilog HDL Implicit Net warning at Dflipflop.v(4): created implicit net for "L4"
+Warning (10236): Verilog HDL Implicit Net warning at Dflipflop.v(4): created implicit net for "L2"
+Warning (10236): Verilog HDL Implicit Net warning at Dflipflop.v(6): created implicit net for "L3"

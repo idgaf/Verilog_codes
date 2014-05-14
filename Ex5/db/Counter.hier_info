@@ -1,0 +1,247 @@
+|main
+H0[0] <= translator:comb_59.port1
+H0[1] <= translator:comb_59.port1
+H0[2] <= translator:comb_59.port1
+H0[3] <= translator:comb_59.port1
+H0[4] <= translator:comb_59.port1
+H0[5] <= translator:comb_59.port1
+H0[6] <= translator:comb_59.port1
+H1[0] <= <VCC>
+H1[1] <= <VCC>
+H1[2] <= <VCC>
+H1[3] <= <VCC>
+H1[4] <= <VCC>
+H1[5] <= <VCC>
+H1[6] <= <VCC>
+H2[0] <= <VCC>
+H2[1] <= <VCC>
+H2[2] <= <VCC>
+H2[3] <= <VCC>
+H2[4] <= <VCC>
+H2[5] <= <VCC>
+H2[6] <= <VCC>
+H3[0] <= <VCC>
+H3[1] <= <VCC>
+H3[2] <= <VCC>
+H3[3] <= <VCC>
+H3[4] <= <VCC>
+H3[5] <= <VCC>
+H3[6] <= <VCC>
+H4[0] <= <VCC>
+H4[1] <= <VCC>
+H4[2] <= <VCC>
+H4[3] <= <VCC>
+H4[4] <= <VCC>
+H4[5] <= <VCC>
+H4[6] <= <VCC>
+H5[0] <= <VCC>
+H5[1] <= <VCC>
+H5[2] <= <VCC>
+H5[3] <= <VCC>
+H5[4] <= <VCC>
+H5[5] <= <VCC>
+H5[6] <= <VCC>
+H6[0] <= <VCC>
+H6[1] <= <VCC>
+H6[2] <= <VCC>
+H6[3] <= <VCC>
+H6[4] <= <VCC>
+H6[5] <= <VCC>
+H6[6] <= <VCC>
+H7[0] <= <VCC>
+H7[1] <= <VCC>
+H7[2] <= <VCC>
+H7[3] <= <VCC>
+H7[4] <= <VCC>
+H7[5] <= <VCC>
+H7[6] <= <VCC>
+SW[0] => ~NO_FANOUT~
+SW[1] => ~NO_FANOUT~
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+SW[10] => ~NO_FANOUT~
+SW[11] => ~NO_FANOUT~
+SW[12] => ~NO_FANOUT~
+SW[13] => ~NO_FANOUT~
+SW[14] => ~NO_FANOUT~
+SW[15] => ~NO_FANOUT~
+SW[16] => ~NO_FANOUT~
+SW[17] => SW[17]~0.IN1
+KEY[0] => clk.IN2
+KEY[1] => r.IN2
+KEY[2] => ~NO_FANOUT~
+KEY[3] => ~NO_FANOUT~
+LED[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+LED[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
+LED[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
+LED[3] <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
+LED[4] <= <GND>
+LED[5] <= <GND>
+LED[6] <= <GND>
+LED[7] <= <GND>
+LED[8] <= <GND>
+LED[9] <= <GND>
+LED[10] <= <GND>
+LED[11] <= <GND>
+LED[12] <= <GND>
+LED[13] <= <GND>
+LED[14] <= <GND>
+LED[15] <= <GND>
+LED[16] <= <GND>
+LED[17] <= <GND>
+
+
+|main|postCounter:u0
+clk => clk~0.IN1
+r => r~0.IN4
+Q[0] <= DflipflopDescibe:a.port3
+Q[1] <= DflipflopDescibe:b.port3
+Q[2] <= DflipflopDescibe:c.port3
+Q[3] <= DflipflopDescibe:d.port3
+
+
+|main|postCounter:u0|DflipflopDescibe:a
+clk => temp.CLK
+r => temp.ACLR
+D => temp.DATAIN
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+Qr <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|postCounter:u0|DflipflopDescibe:b
+clk => temp.CLK
+r => temp.ACLR
+D => temp.DATAIN
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+Qr <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|postCounter:u0|DflipflopDescibe:c
+clk => temp.CLK
+r => temp.ACLR
+D => temp.DATAIN
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+Qr <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|postCounter:u0|DflipflopDescibe:d
+clk => temp.CLK
+r => temp.ACLR
+D => temp.DATAIN
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+Qr <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|negCounter:u1
+clk => clk~0.IN1
+r => r~0.IN4
+Q[0] <= Q[0]~2.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= DflipflopDescibe:d.port3
+
+
+|main|negCounter:u1|DflipflopDescibe:a
+clk => temp.CLK
+r => temp.ACLR
+D => temp.DATAIN
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+Qr <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|negCounter:u1|DflipflopDescibe:b
+clk => temp.CLK
+r => temp.ACLR
+D => temp.DATAIN
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+Qr <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|negCounter:u1|DflipflopDescibe:c
+clk => temp.CLK
+r => temp.ACLR
+D => temp.DATAIN
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+Qr <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|negCounter:u1|DflipflopDescibe:d
+clk => temp.CLK
+r => temp.ACLR
+D => temp.DATAIN
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+Qr <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|MUX4bit2to1:u2
+X[0] => O~3.DATAA
+X[1] => O~2.DATAA
+X[2] => O~1.DATAA
+X[3] => O~0.DATAA
+Y[0] => O~3.DATAB
+Y[1] => O~2.DATAB
+Y[2] => O~1.DATAB
+Y[3] => O~0.DATAB
+C => Decoder0.IN0
+O[0] <= O~3.DB_MAX_OUTPUT_PORT_TYPE
+O[1] <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+O[2] <= O~1.DB_MAX_OUTPUT_PORT_TYPE
+O[3] <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|translator:comb_59
+X[0] => H~43.IN0
+X[0] => H~34.IN0
+X[0] => H~31.IN0
+X[0] => H~30.IN0
+X[0] => H~28.IN0
+X[0] => H~25.IN1
+X[0] => H~18.IN0
+X[0] => H~15.IN0
+X[0] => H~6.IN0
+X[0] => H~3.IN0
+X[0] => H~0.IN1
+X[0] => H~8.IN0
+X[0] => H~10.IN0
+X[0] => H~14.IN0
+X[0] => H~22.IN1
+X[0] => H~40.IN0
+X[1] => H~42.IN0
+X[1] => H~36.IN0
+X[1] => H~33.IN1
+X[1] => H~21.IN1
+X[1] => H~17.IN1
+X[1] => H~12.IN0
+X[1] => H~5.IN1
+X[1] => H~24.IN0
+X[1] => H~27.IN1
+X[1] => H~39.IN0
+X[1] => H~46.IN0
+X[2] => H~41.IN0
+X[2] => H~38.IN0
+X[2] => H~17.IN0
+X[2] => H~20.IN0
+X[2] => H~27.IN0
+X[2] => H~45.IN0
+X[3] => H~38.IN1
+X[3] => H~20.IN1
+X[3] => H~5.IN0
+X[3] => H~25.IN0
+X[3] => H~33.IN0
+X[3] => H~41.IN1
+X[3] => H~45.IN1
+H[0] <= H~2.DB_MAX_OUTPUT_PORT_TYPE
+H[1] <= H~9.DB_MAX_OUTPUT_PORT_TYPE
+H[2] <= H~13.DB_MAX_OUTPUT_PORT_TYPE
+H[3] <= H~23.DB_MAX_OUTPUT_PORT_TYPE
+H[4] <= H~29.DB_MAX_OUTPUT_PORT_TYPE
+H[5] <= H~37.DB_MAX_OUTPUT_PORT_TYPE
+H[6] <= H~47.DB_MAX_OUTPUT_PORT_TYPE
+
+

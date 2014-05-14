@@ -1,0 +1,5 @@
+module postCounter(clk,r,Q);
+	input clk,r;
+	output [3:0]Q;
+	
+endmodule
