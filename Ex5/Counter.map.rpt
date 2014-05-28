@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Counter
-Wed May 14 22:15:16 2014
+Sun May 25 12:43:28 2014
 Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
 
 
@@ -41,7 +41,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +------------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 14 22:15:16 2014   ;
+; Analysis & Synthesis Status        ; Successful - Sun May 25 12:43:28 2014   ;
 ; Quartus II Version                 ; 7.2 Build 151 09/26/2007 SJ Web Edition ;
 ; Revision Name                      ; Counter                                 ;
 ; Top-level Entity Name              ; main                                    ;
@@ -219,7 +219,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 7.2 Build 151 09/26/2007 SJ Web Edition
-    Info: Processing started: Wed May 14 22:15:15 2014
+    Info: Processing started: Sun May 25 12:43:27 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Counter -c Counter
 Info: Found 1 design units, including 1 entities, in source file main.v
     Info: Found entity 1: main
@@ -325,9 +325,6 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED[15]" stuck at GND
     Warning (13410): Pin "LED[16]" stuck at GND
     Warning (13410): Pin "LED[17]" stuck at GND
-Warning: Ignored assignments for entity "Counter" -- entity does not exist in design
-    Warning: Assignment of entity set_global_assignment -name LL_ROOT_REGION ON -entity Counter -section_id "Root Region" is ignored
-    Warning: Assignment of entity set_global_assignment -name LL_MEMBER_STATE LOCKED -entity Counter -section_id "Root Region" is ignored
 Info: Generated suppressed messages file C:/Users/Jason/Documents/Github/Verilog/Ex5/Counter.map.smsg
 Warning: Design contains 19 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[0]"
@@ -353,9 +350,9 @@ Info: Implemented 113 device resources after synthesis - the final resource coun
     Info: Implemented 22 input pins
     Info: Implemented 74 output pins
     Info: Implemented 17 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 105 warnings
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 102 warnings
     Info: Allocated 196 megabytes of memory during processing
-    Info: Processing ended: Wed May 14 22:15:16 2014
+    Info: Processing ended: Sun May 25 12:43:28 2014
     Info: Elapsed time: 00:00:01
 
 

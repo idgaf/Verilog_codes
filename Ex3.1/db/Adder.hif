@@ -47,11 +47,6 @@ ON
 IGNORE_VERILOG_INITIAL_CONSTRUCTS
 OFF
 }
-# hierarchies {
-translator:t0
-translator:t1
-translator:t2
-}
 # lmf
 ..|..|..|..|..|..|altera|72|quartus|lmf|
 d41d8cd98f0b24e980998ecf8427e
@@ -85,90 +80,8 @@ IGNORE_VERILOG_INITIAL_CONSTRUCTS
 OFF
 }
 # hierarchies {
-SuperAdder:u1
-}
-# lmf
-..|..|..|..|..|..|altera|72|quartus|lmf|
-d41d8cd98f0b24e980998ecf8427e
-# macro_sequence
-
-# end
-# entity
-RippieAdder
-# storage
-db|Adder.(2).cnf
-db|Adder.(2).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-Adder.v
-ce37b62c934a61763467e4edf3a68a0
-7
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-}
-# hierarchies {
-RippieAdder:u0
-Subtractor:u2|RippieAdder:comb_8
-Subtractor:u2|RippieAdder:comb_18
-}
-# lmf
-..|..|..|..|..|..|altera|72|quartus|lmf|
-d41d8cd98f0b24e980998ecf8427e
-# macro_sequence
-
-# end
-# entity
-FA
-# storage
-db|Adder.(4).cnf
-db|Adder.(4).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-Adder.v
-ce37b62c934a61763467e4edf3a68a0
-7
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-}
-# hierarchies {
-RippieAdder:u0|FA:fa0
-RippieAdder:u0|FA:fa1
-RippieAdder:u0|FA:fa2
-RippieAdder:u0|FA:fa3
-Subtractor:u2|RippieAdder:comb_8|FA:fa0
-Subtractor:u2|RippieAdder:comb_8|FA:fa1
-Subtractor:u2|RippieAdder:comb_8|FA:fa2
-Subtractor:u2|RippieAdder:comb_8|FA:fa3
-Subtractor:u2|RippieAdder:comb_18|FA:fa0
-Subtractor:u2|RippieAdder:comb_18|FA:fa1
-Subtractor:u2|RippieAdder:comb_18|FA:fa2
-Subtractor:u2|RippieAdder:comb_18|FA:fa3
+SuperAdder:comb_4
+SuperAdder:comb_5
 }
 # lmf
 ..|..|..|..|..|..|altera|72|quartus|lmf|
@@ -202,9 +115,6 @@ ON
 IGNORE_VERILOG_INITIAL_CONSTRUCTS
 OFF
 }
-# hierarchies {
-MUX3bit3to1:comb_54
-}
 # lmf
 ..|..|..|..|..|..|altera|72|quartus|lmf|
 d41d8cd98f0b24e980998ecf8427e
@@ -236,9 +146,6 @@ AUTO_ROM_RECOGNITION
 ON
 IGNORE_VERILOG_INITIAL_CONSTRUCTS
 OFF
-}
-# hierarchies {
-MUX1bit3to1:comb_55
 }
 # lmf
 ..|..|..|..|..|..|altera|72|quartus|lmf|
@@ -272,9 +179,6 @@ ON
 IGNORE_VERILOG_INITIAL_CONSTRUCTS
 OFF
 }
-# hierarchies {
-Subtractor:u2
-}
 # lmf
 ..|..|..|..|..|..|altera|72|quartus|lmf|
 d41d8cd98f0b24e980998ecf8427e
@@ -282,7 +186,7 @@ d41d8cd98f0b24e980998ecf8427e
 
 # end
 # entity
-main
+RippieAdder
 # storage
 db|Adder.(0).cnf
 db|Adder.(0).cnf
@@ -292,8 +196,72 @@ ON
 }
 # case_sensitive
 # source_file
-main.v
-aee6ee02d9bdfb78b681299d13a251
+Adder.v
+ce37b62c934a61763467e4edf3a68a0
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+FA
+# storage
+db|Adder.(2).cnf
+db|Adder.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Adder.v
+ce37b62c934a61763467e4edf3a68a0
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+EightbitLAAdder
+# storage
+db|Adder.(4).cnf
+db|Adder.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+EightbitLAAdder.v
+75ce6b921a6ee857991ee55f92dddb52
 7
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

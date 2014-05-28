@@ -1,5 +1,5 @@
 Flow report for Dflipflop
-Wed May 07 12:40:02 2014
+Sun May 25 11:06:17 2014
 Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
 
 
@@ -37,19 +37,19 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +------------------------------------+-----------------------------------------+
-; Flow Status                        ; Successful - Wed May 07 12:40:02 2014   ;
+; Flow Status                        ; Successful - Sun May 25 11:06:16 2014   ;
 ; Quartus II Version                 ; 7.2 Build 151 09/26/2007 SJ Web Edition ;
 ; Revision Name                      ; Dflipflop                               ;
-; Top-level Entity Name              ; main                                    ;
+; Top-level Entity Name              ; ShiftRegister                           ;
 ; Family                             ; Cyclone II                              ;
 ; Device                             ; EP2C35F672C6                            ;
 ; Timing Models                      ; Final                                   ;
 ; Met timing requirements            ; Yes                                     ;
-; Total logic elements               ; 5 / 33,216 ( < 1 % )                    ;
-;     Total combinational functions  ; 5 / 33,216 ( < 1 % )                    ;
+; Total logic elements               ; 12 / 33,216 ( < 1 % )                   ;
+;     Total combinational functions  ; 12 / 33,216 ( < 1 % )                   ;
 ;     Dedicated logic registers      ; 0 / 33,216 ( 0 % )                      ;
 ; Total registers                    ; 0                                       ;
-; Total pins                         ; 96 / 475 ( 20 % )                       ;
+; Total pins                         ; 6 / 475 ( 1 % )                         ;
 ; Total virtual pins                 ; 0                                       ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                     ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                          ;
@@ -62,22 +62,22 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/07/2014 12:39:49 ;
+; Start date & time ; 05/25/2014 11:06:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Dflipflop           ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                        ;
-+------------------------------------+---------+---------------+-------------+------------+
-; Assignment Name                    ; Value   ; Default Value ; Entity Name ; Section Id ;
-+------------------------------------+---------+---------------+-------------+------------+
-; PARTITION_COLOR                    ; 2147039 ; --            ; main        ; Top        ;
-; PARTITION_NETLIST_TYPE             ; SOURCE  ; --            ; main        ; Top        ;
-; TOP_LEVEL_ENTITY                   ; main    ; Dflipflop     ; --          ; --         ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off     ; --            ; --          ; eda_palace ;
-+------------------------------------+---------+---------------+-------------+------------+
++-------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                ;
++------------------------------------+---------------+---------------+---------------+------------+
+; Assignment Name                    ; Value         ; Default Value ; Entity Name   ; Section Id ;
++------------------------------------+---------------+---------------+---------------+------------+
+; PARTITION_COLOR                    ; 2147039       ; --            ; ShiftRegister ; Top        ;
+; PARTITION_NETLIST_TYPE             ; SOURCE        ; --            ; ShiftRegister ; Top        ;
+; TOP_LEVEL_ENTITY                   ; ShiftRegister ; Dflipflop     ; --            ; --         ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off           ; --            ; --            ; eda_palace ;
++------------------------------------+---------------+---------------+---------------+------------+
 
 
 +------------------------------------------------------------------+
@@ -85,11 +85,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ;
 +-------------------------+--------------+-------------------------+
-; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ;
+; Analysis & Synthesis    ; 00:00:00     ; 1.0                     ;
 ; Fitter                  ; 00:00:04     ; 1.0                     ;
 ; Assembler               ; 00:00:05     ; 1.0                     ;
 ; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ;
-; Total                   ; 00:00:10     ; --                      ;
+; Total                   ; 00:00:09     ; --                      ;
 +-------------------------+--------------+-------------------------+
 
 

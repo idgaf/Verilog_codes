@@ -1,0 +1,291 @@
+Version 7.2 Build 151 09/26/2007 SJ Web Edition
+11
+1009
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+scrambler
+# storage
+db|main.(2).cnf
+db|main.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+scrambler.v
+6f16d07ab94897207be63f562dfd8
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# user_parameter {
+SEED
+010010101100110
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# hierarchies {
+FrameTrans:comb_78|scrambler:U1
+FrameDataCheck:comb_80|scrambler:U1
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+FrameDataCheck
+# storage
+db|main.(5).cnf
+db|main.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+FrameDataCheck.v
+16246d660909bf2dba59dcd51dc28d
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+FrameDataCheck:comb_80
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+Count256
+# storage
+db|main.(6).cnf
+db|main.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+count256.v
+2dd31e80ab861aefe5c4565f5e51cc23
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+FramesyncFSM:comb_79|Count256:u1
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+FramesyncFSM
+# storage
+db|main.(3).cnf
+db|main.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+FramesyncFSM.v
+7d728ac88aeeda7fbadcc418ba64e986
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+FramesyncFSM:comb_79
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+Probe
+# storage
+db|main.(4).cnf
+db|main.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Probe.v
+502cb3dbbe9622ab1c3cf995afb14f
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+FramesyncFSM:comb_79|Probe:u0
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+main
+# storage
+db|main.(0).cnf
+db|main.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+main.v
+453d7af544795a24708ca8dad843e9a7
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+|
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+FrameTrans
+# storage
+db|main.(1).cnf
+db|main.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+FrameTrans.v
+929c49b7176b4142e794d552151c56
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# user_parameter {
+DELAY_NUM
+99999
+PARAMETER_SIGNED_DEC
+DEF
+FRAMEHEAD
+10011011
+PARAMETER_UNSIGNED_BIN
+DEF
+FRAMEHEAD_WRONG
+10001001
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# hierarchies {
+FrameTrans:comb_78
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# complete
+

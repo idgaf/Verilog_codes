@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Thu May 15 00:16:53 2014
+Sun May 25 20:16:51 2014
 Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
 
 
@@ -41,7 +41,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +------------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 15 00:16:53 2014   ;
+; Analysis & Synthesis Status        ; Successful - Sun May 25 20:16:51 2014   ;
 ; Quartus II Version                 ; 7.2 Build 151 09/26/2007 SJ Web Edition ;
 ; Revision Name                      ; main                                    ;
 ; Top-level Entity Name              ; main                                    ;
@@ -219,8 +219,20 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 7.2 Build 151 09/26/2007 SJ Web Edition
-    Info: Processing started: Thu May 15 00:16:52 2014
+    Info: Processing started: Sun May 25 20:16:50 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
+Warning: Ignored assignments for entity "main" -- entity does not exist in design
+    Warning: Assignment of entity set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region" is ignored
+    Warning: Assignment of entity set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region" is ignored
+    Warning: Assignment of entity set_instance_assignment -name PARTITION_HIERARCHY no_file_for_top_partition -to | -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_COLOR 2147039 -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS REPLACE_CONFLICTING -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -section_id Top is ignored
 Info: Found 1 design units, including 1 entities, in source file main.v
     Info: Found entity 1: main
 Warning (10275): Verilog HDL Module Instantiation warning at accumulator.v(7): ignored dangling comma in List of Port Connections
@@ -349,9 +361,9 @@ Info: Implemented 121 device resources after synthesis - the final resource coun
     Info: Implemented 22 input pins
     Info: Implemented 74 output pins
     Info: Implemented 25 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 99 warnings
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 111 warnings
     Info: Allocated 201 megabytes of memory during processing
-    Info: Processing ended: Thu May 15 00:16:53 2014
+    Info: Processing ended: Sun May 25 20:16:51 2014
     Info: Elapsed time: 00:00:01
 
 

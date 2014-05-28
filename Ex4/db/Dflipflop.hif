@@ -47,8 +47,37 @@ ON
 IGNORE_VERILOG_INITIAL_CONSTRUCTS
 OFF
 }
-# hierarchies {
-|
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+DflipflopDescibe
+# storage
+db|Dflipflop.(2).cnf
+db|Dflipflop.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Dflipflop.v
+4d5447c5859ddcfd2f3deacee7fb236
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
 }
 # lmf
 ..|..|..|..|..|..|altera|72|quartus|lmf|
@@ -59,8 +88,8 @@ d41d8cd98f0b24e980998ecf8427e
 # entity
 Dflipflop
 # storage
-db|Dflipflop.(1).cnf
-db|Dflipflop.(1).cnf
+db|Dflipflop.(3).cnf
+db|Dflipflop.(3).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -83,7 +112,45 @@ IGNORE_VERILOG_INITIAL_CONSTRUCTS
 OFF
 }
 # hierarchies {
-Dflipflop:comb_65
+Dflipflop:u0
+Dflipflop:u1
+Dflipflop:u2
+Dflipflop:u3
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+ShiftRegister
+# storage
+db|Dflipflop.(1).cnf
+db|Dflipflop.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+ShiftRegister.v
+273f22d4b2abbdd932b43febdb4ef9
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+|
 }
 # lmf
 ..|..|..|..|..|..|altera|72|quartus|lmf|

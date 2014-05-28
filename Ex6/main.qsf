@@ -32,11 +32,6 @@ set_global_assignment -name LAST_QUARTUS_VERSION 7.2
 set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_palace
 set_global_assignment -name VERILOG_FILE main.v
 set_global_assignment -name VERILOG_FILE accumulator.v
-set_instance_assignment -name PARTITION_HIERARCHY no_file_for_top_partition -to | -section_id Top
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_COLOR 2147039 -section_id Top
-set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
-set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_global_assignment -name VERILOG_FILE SuperAdder.v
 set_global_assignment -name VERILOG_FILE Ex2.v
 set_location_assignment PIN_V20 -to H1[0]
@@ -138,3 +133,8 @@ set_location_assignment PIN_V2 -to SW[17]
 set_global_assignment -name VERILOG_FILE Multiplier.v
 set_global_assignment -name VERILOG_FILE Counter.v
 set_global_assignment -name VERILOG_FILE Dflipflop.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 2147039 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_instance_assignment -name PARTITION_HIERARCHY no_file_for_top_partition -to | -section_id Top

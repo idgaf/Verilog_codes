@@ -1,0 +1,15 @@
+module RippieAdder(a,b,cin,s,cout);
+	input wire [3:0]a;
+	input wire [3:0]b;
+	input wire cin;
+	output wire [3:0]s;
+	output wire cout;
+	wire [2:0]temp;
+	FA fa0(a[0],b[0],cin,s[0],temp[0]);
+	FA fa1(a[1],b[1],temp[0],s[1],temp[1]);
+	FA fa2(a[2],b[2],temp[1],s[2],temp[2]);
+	FA fa3(a[3],b[3],temp[2],s[3],cout);
+endmodule
+
+
+

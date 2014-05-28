@@ -1,4 +1,4 @@
-module Dflipflop(s,r,clk,D,Q,Qr);
+module DflipflopDescibe(s,r,clk,D,Q,Qr);
 	input wire s,r,clk,D;
 	output wire Q,Qr;
 	nand(L1,s,L4,L2);
@@ -9,7 +9,7 @@ module Dflipflop(s,r,clk,D,Q,Qr);
 	nand(Qr,Q,r,L3);
 endmodule
 
-module DflipflopDescibe(clk,r,D,Q,Qr);
+module Dflipflop(clk,D,Q,Qr);
 	input wire clk,D;
 	reg temp;
 	output wire Q,Qr;
@@ -19,8 +19,4 @@ module DflipflopDescibe(clk,r,D,Q,Qr);
 	end
 	assign Q=D;
 	assign Qr=~Q;
-	always@(r)
-	begin
-		if(r) temp<=4'b0000;
-	end
 endmodule

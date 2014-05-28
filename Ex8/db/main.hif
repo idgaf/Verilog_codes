@@ -1,0 +1,203 @@
+Version 7.2 Build 151 09/26/2007 SJ Web Edition
+11
+1009
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+translator
+# storage
+db|main.(2).cnf
+db|main.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+translator.v
+d590a275659f6332b02467393eeae9a
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+frequency:u1|translator:comb_5
+frequency:u1|translator:comb_6
+frequency:u1|translator:comb_7
+frequency:u1|translator:comb_8
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+DecimalCounter
+# storage
+db|main.(4).cnf
+db|main.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+DecimalCounter.v
+c199949349294b40ec49eefc5671
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+frequency:u1|DecimalCounter:comb_4
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+main
+# storage
+db|main.(0).cnf
+db|main.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+main.v
+ee7361fd1a32703baf90bea548774e1b
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+|
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+signalinput
+# storage
+db|main.(1).cnf
+db|main.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+signalinput.v
+7cafe8532df171624ac763907aa54b7
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+signalinput:u0
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+frequency
+# storage
+db|main.(3).cnf
+db|main.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+frequency.v
+57c2f1ec6d11b5eac1d7e92869a8ed
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+frequency:u1
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# complete
+

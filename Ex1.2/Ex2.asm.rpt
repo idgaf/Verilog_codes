@@ -1,5 +1,5 @@
 Assembler report for Ex2
-Fri May 02 21:16:51 2014
+Sat May 17 21:10:32 2014
 Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri May 02 21:16:51 2014 ;
+; Assembler Status      ; Successful - Sat May 17 21:10:32 2014 ;
 ; Revision Name         ; Ex2                                   ;
 ; Top-level Entity Name ; Ex2                                   ;
 ; Family                ; Cyclone II                            ;
@@ -117,13 +117,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 7.2 Build 151 09/26/2007 SJ Web Edition
-    Info: Processing started: Fri May 02 21:16:46 2014
+    Info: Processing started: Sat May 17 21:10:27 2014
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Ex2 -c Ex2
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Allocated 254 megabytes of memory during processing
-    Info: Processing ended: Fri May 02 21:16:51 2014
+    Info: Processing ended: Sat May 17 21:10:32 2014
     Info: Elapsed time: 00:00:05
 
 

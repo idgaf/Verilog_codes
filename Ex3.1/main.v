@@ -31,16 +31,16 @@ module main(H0,H1,H2,H3,H4,H5,H6,H7,SW,KEY,LED);
 	assign LED[16]=SW[16];
 	//PROGRAM START
 	wire [14:0]temp;
-	RippieAdder u0(A,B,CIN,temp[3:0],temp[4]);
+	//RippieAdder u0(A,B,CIN,temp[3:0],temp[4]);
 	SuperAdder u1(A,B,CIN,temp[8:5],temp[9]);
 	Subtractor u2(A,B,temp[13:10],temp[14]);
-	MUX3bit3to1(temp[3:0],temp[8:5],temp[13:10],SW[17:16],S);
-	MUX1bit3to1(temp[4],temp[9],temp[14],SW[17:16],COUT);
+	//MUX3bit3to1(temp[3:0],temp[8:5],temp[13:10],SW[17:16],S);
+	//MUX1bit3to1(temp[4],temp[9],temp[14],SW[17:16],COUT);
 	assign H1[6]=~(SW[17]&&~COUT);
 	//OUTPUTDISPLAY
-	translator t0(SW[3:0],H4);
-	translator t1(SW[7:4],H6);
-	translator t2(S,H0);
+	//translator t0(SW[3:0],H4);
+	//translator t1(SW[7:4],H6);
+	//translator t2(S,H0);
 endmodule
 	
 	

@@ -1,0 +1,7 @@
+Warning (10236): Verilog HDL Implicit Net warning at main.v(39): created implicit net for "Clock"
+Warning (10236): Verilog HDL Implicit Net warning at main.v(39): created implicit net for "DataIn"
+Warning (10236): Verilog HDL Implicit Net warning at main.v(40): created implicit net for "DataOut"
+Warning (10236): Verilog HDL Implicit Net warning at main.v(40): created implicit net for "DataOutEn"
+Warning (10236): Verilog HDL Implicit Net warning at main.v(41): created implicit net for "DataWrong"
+Warning (10268): Verilog HDL information at FramesyncFSM.v(20): Always Construct contains both blocking and non-blocking assignments
+Warning (10236): Verilog HDL Implicit Net warning at FramesyncFSM.v(10): created implicit net for "S"

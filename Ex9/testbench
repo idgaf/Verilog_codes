@@ -1,0 +1,19 @@
+module testbench(Clock,DataIn);
+        output wire Clock,DataIn,DataOut,DataOutEn,[1:0]State;       
+        output reg Reset,sysclk,[1:0]Mode;
+        
+        FrameTrans(Reset,sysclk,Mode,Clock,DataIn);
+	FramesyncFSM(Clock,Reset,DataIn,DataOut,DataOutEn,State);
+	FrameDataCheck(Reset, Clock, DataOut, DataOutEn, DataWrong);
+	
+	initial
+	begin
+	Mode<=2'b00;
+	Reset<=1;
+	sysclk<=0;
+	end
+	initial
+	begin
+	       forever #5 sysclk<=~sysclk;
+	end
+endmodule

@@ -1,0 +1,5 @@
+	module testbench(Clock,DataIn);
+	
+	FrameTrans(Reset,sysclk,Mode,Clock,DataIn);
+	FramesyncFSM(Clock,Reset,DataIn,DataOut,DataOutEn,State);
+	FrameDataCheck(Reset, Clock, DataOut, DataOutEn, DataWrong);

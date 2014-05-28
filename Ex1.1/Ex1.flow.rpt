@@ -1,5 +1,5 @@
 Flow report for Ex1
-Fri May 02 21:02:09 2014
+Sat May 17 21:29:34 2014
 Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +------------------------------------+-----------------------------------------+
-; Flow Status                        ; Successful - Fri May 02 21:02:09 2014   ;
+; Flow Status                        ; Successful - Sat May 17 21:29:33 2014   ;
 ; Quartus II Version                 ; 7.2 Build 151 09/26/2007 SJ Web Edition ;
 ; Revision Name                      ; Ex1                                     ;
 ; Top-level Entity Name              ; Ex1                                     ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/02/2014 21:01:57 ;
+; Start date & time ; 05/17/2014 21:29:21 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Ex1                 ;
 +-------------------+---------------------+
@@ -84,11 +84,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ;
 +-------------------------+--------------+-------------------------+
-; Analysis & Synthesis    ; 00:00:00     ; 1.0                     ;
+; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ;
 ; Fitter                  ; 00:00:04     ; 1.0                     ;
-; Assembler               ; 00:00:05     ; 1.0                     ;
-; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ;
-; Total                   ; 00:00:10     ; --                      ;
+; Assembler               ; 00:00:06     ; 1.0                     ;
+; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ;
+; Total                   ; 00:00:11     ; --                      ;
 +-------------------------+--------------+-------------------------+
 
 

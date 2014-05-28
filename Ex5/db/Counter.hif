@@ -64,76 +64,6 @@ d41d8cd98f0b24e980998ecf8427e
 
 # end
 # entity
-postCounter
-# storage
-db|Counter.(1).cnf
-db|Counter.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-Counter.v
-2d448725fc3d8cd8c98c78c8dc1095
-7
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-}
-# hierarchies {
-postCounter:u0
-}
-# lmf
-..|..|..|..|..|..|altera|72|quartus|lmf|
-d41d8cd98f0b24e980998ecf8427e
-# macro_sequence
-
-# end
-# entity
-negCounter
-# storage
-db|Counter.(3).cnf
-db|Counter.(3).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-Counter.v
-2d448725fc3d8cd8c98c78c8dc1095
-7
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-}
-# hierarchies {
-negCounter:u1
-}
-# lmf
-..|..|..|..|..|..|altera|72|quartus|lmf|
-d41d8cd98f0b24e980998ecf8427e
-# macro_sequence
-
-# end
-# entity
 MUX4bit2to1
 # storage
 db|Counter.(4).cnf
@@ -231,6 +161,76 @@ OFF
 }
 # hierarchies {
 |
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+postCounter
+# storage
+db|Counter.(1).cnf
+db|Counter.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Counter.v
+2d448725fc3d8cd8c98c78c8dc1095
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+postCounter:u0
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+negCounter
+# storage
+db|Counter.(3).cnf
+db|Counter.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Counter.v
+2d448725fc3d8cd8c98c78c8dc1095
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+negCounter:u1
 }
 # lmf
 ..|..|..|..|..|..|altera|72|quartus|lmf|

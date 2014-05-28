@@ -1,200 +1,33 @@
-|main
-H0[0] <= translator:t2.port1
-H0[1] <= translator:t2.port1
-H0[2] <= translator:t2.port1
-H0[3] <= translator:t2.port1
-H0[4] <= translator:t2.port1
-H0[5] <= translator:t2.port1
-H0[6] <= translator:t2.port1
-H1[0] <= <VCC>
-H1[1] <= <VCC>
-H1[2] <= <VCC>
-H1[3] <= <VCC>
-H1[4] <= <VCC>
-H1[5] <= <VCC>
-H1[6] <= H1~0.DB_MAX_OUTPUT_PORT_TYPE
-H2[0] <= <VCC>
-H2[1] <= <VCC>
-H2[2] <= <VCC>
-H2[3] <= <VCC>
-H2[4] <= <VCC>
-H2[5] <= <VCC>
-H2[6] <= <VCC>
-H3[0] <= <VCC>
-H3[1] <= <VCC>
-H3[2] <= <VCC>
-H3[3] <= <VCC>
-H3[4] <= <VCC>
-H3[5] <= <VCC>
-H3[6] <= <VCC>
-H4[0] <= translator:t0.port1
-H4[1] <= translator:t0.port1
-H4[2] <= translator:t0.port1
-H4[3] <= translator:t0.port1
-H4[4] <= translator:t0.port1
-H4[5] <= translator:t0.port1
-H4[6] <= translator:t0.port1
-H5[0] <= <VCC>
-H5[1] <= <VCC>
-H5[2] <= <VCC>
-H5[3] <= <VCC>
-H5[4] <= <VCC>
-H5[5] <= <VCC>
-H5[6] <= <VCC>
-H6[0] <= translator:t1.port1
-H6[1] <= translator:t1.port1
-H6[2] <= translator:t1.port1
-H6[3] <= translator:t1.port1
-H6[4] <= translator:t1.port1
-H6[5] <= translator:t1.port1
-H6[6] <= translator:t1.port1
-H7[0] <= <VCC>
-H7[1] <= <VCC>
-H7[2] <= <VCC>
-H7[3] <= <VCC>
-H7[4] <= <VCC>
-H7[5] <= <VCC>
-H7[6] <= <VCC>
-SW[0] => A[0].IN4
-SW[1] => A[1].IN4
-SW[2] => A[2].IN4
-SW[3] => A[3].IN4
-SW[4] => B[0].IN4
-SW[5] => B[1].IN4
-SW[6] => B[2].IN4
-SW[7] => B[3].IN4
-SW[8] => ~NO_FANOUT~
-SW[9] => ~NO_FANOUT~
-SW[10] => ~NO_FANOUT~
-SW[11] => ~NO_FANOUT~
-SW[12] => ~NO_FANOUT~
-SW[13] => ~NO_FANOUT~
-SW[14] => ~NO_FANOUT~
-SW[15] => ~NO_FANOUT~
-SW[16] => SW[16]~1.IN2
-SW[17] => SW[17]~0.IN2
-KEY[0] => CIN.IN2
-KEY[1] => ~NO_FANOUT~
-KEY[2] => ~NO_FANOUT~
-KEY[3] => ~NO_FANOUT~
-LED[0] <= S[0].DB_MAX_OUTPUT_PORT_TYPE
-LED[1] <= S[1].DB_MAX_OUTPUT_PORT_TYPE
-LED[2] <= S[2].DB_MAX_OUTPUT_PORT_TYPE
-LED[3] <= S[3].DB_MAX_OUTPUT_PORT_TYPE
-LED[4] <= MUX1bit3to1:comb_55.port4
-LED[5] <= <GND>
-LED[6] <= <GND>
-LED[7] <= <GND>
-LED[8] <= <GND>
-LED[9] <= <GND>
-LED[10] <= <GND>
-LED[11] <= <GND>
-LED[12] <= <GND>
-LED[13] <= <GND>
-LED[14] <= <GND>
-LED[15] <= <GND>
-LED[16] <= SW[16]~1.DB_MAX_OUTPUT_PORT_TYPE
-LED[17] <= SW[17]~0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|RippieAdder:u0
-a[0] => a[0]~3.IN1
-a[1] => a[1]~2.IN1
-a[2] => a[2]~1.IN1
-a[3] => a[3]~0.IN1
-b[0] => b[0]~3.IN1
-b[1] => b[1]~2.IN1
-b[2] => b[2]~1.IN1
-b[3] => b[3]~0.IN1
+|EightbitLAAdder
+a[0] => a[0]~7.IN1
+a[1] => a[1]~6.IN1
+a[2] => a[2]~5.IN1
+a[3] => a[3]~4.IN1
+a[4] => a[4]~3.IN1
+a[5] => a[5]~2.IN1
+a[6] => a[6]~1.IN1
+a[7] => a[7]~0.IN1
+b[0] => b[0]~7.IN1
+b[1] => b[1]~6.IN1
+b[2] => b[2]~5.IN1
+b[3] => b[3]~4.IN1
+b[4] => b[4]~3.IN1
+b[5] => b[5]~2.IN1
+b[6] => b[6]~1.IN1
+b[7] => b[7]~0.IN1
 cin => cin~0.IN1
-s[0] <= FA:fa0.port3
-s[1] <= FA:fa1.port3
-s[2] <= FA:fa2.port3
-s[3] <= FA:fa3.port3
-cout <= FA:fa3.port4
+s[0] <= SuperAdder:comb_4.port3
+s[1] <= SuperAdder:comb_4.port3
+s[2] <= SuperAdder:comb_4.port3
+s[3] <= SuperAdder:comb_4.port3
+s[4] <= SuperAdder:comb_5.port3
+s[5] <= SuperAdder:comb_5.port3
+s[6] <= SuperAdder:comb_5.port3
+s[7] <= SuperAdder:comb_5.port3
+cout <= SuperAdder:comb_5.port4
 
 
-|main|RippieAdder:u0|FA:fa0
-x => co~2.IN0
-x => co~0.IN0
-x => s~7.IN0
-x => s~3.IN0
-y => co~2.IN1
-y => co~0.IN1
-y => s~4.IN0
-y => s~1.IN0
-y => s~0.IN0
-y => s~5.IN0
-cin => co~1.IN0
-cin => s~4.IN1
-cin => s~0.IN1
-cin => s~1.IN1
-cin => s~5.IN1
-s <= s~8.DB_MAX_OUTPUT_PORT_TYPE
-co <= co~3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|RippieAdder:u0|FA:fa1
-x => co~2.IN0
-x => co~0.IN0
-x => s~7.IN0
-x => s~3.IN0
-y => co~2.IN1
-y => co~0.IN1
-y => s~4.IN0
-y => s~1.IN0
-y => s~0.IN0
-y => s~5.IN0
-cin => co~1.IN0
-cin => s~4.IN1
-cin => s~0.IN1
-cin => s~1.IN1
-cin => s~5.IN1
-s <= s~8.DB_MAX_OUTPUT_PORT_TYPE
-co <= co~3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|RippieAdder:u0|FA:fa2
-x => co~2.IN0
-x => co~0.IN0
-x => s~7.IN0
-x => s~3.IN0
-y => co~2.IN1
-y => co~0.IN1
-y => s~4.IN0
-y => s~1.IN0
-y => s~0.IN0
-y => s~5.IN0
-cin => co~1.IN0
-cin => s~4.IN1
-cin => s~0.IN1
-cin => s~1.IN1
-cin => s~5.IN1
-s <= s~8.DB_MAX_OUTPUT_PORT_TYPE
-co <= co~3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|RippieAdder:u0|FA:fa3
-x => co~2.IN0
-x => co~0.IN0
-x => s~7.IN0
-x => s~3.IN0
-y => co~2.IN1
-y => co~0.IN1
-y => s~4.IN0
-y => s~1.IN0
-y => s~0.IN0
-y => s~5.IN0
-cin => co~1.IN0
-cin => s~4.IN1
-cin => s~0.IN1
-cin => s~1.IN1
-cin => s~5.IN1
-s <= s~8.DB_MAX_OUTPUT_PORT_TYPE
-co <= co~3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|SuperAdder:u1
+|EightbitLAAdder|SuperAdder:comb_4
 a[0] => s~7.IN0
 a[0] => P~6.IN0
 a[0] => G[0].IN0
@@ -258,399 +91,67 @@ s[3] <= s~35.DB_MAX_OUTPUT_PORT_TYPE
 cout <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|Subtractor:u2
-A[0] => A[0]~3.IN1
-A[1] => A[1]~2.IN1
-A[2] => A[2]~1.IN1
-A[3] => A[3]~0.IN1
-B[0] => reverse[0].IN1
-B[1] => reverse[1].IN1
-B[2] => reverse[2].IN1
-B[3] => reverse[3].IN1
-S[0] <= RippieAdder:comb_18.port3
-S[1] <= RippieAdder:comb_18.port3
-S[2] <= RippieAdder:comb_18.port3
-S[3] <= RippieAdder:comb_18.port3
-sgn <= RippieAdder:comb_8.port4
-
-
-|main|Subtractor:u2|RippieAdder:comb_8
-a[0] => a[0]~3.IN1
-a[1] => a[1]~2.IN1
-a[2] => a[2]~1.IN1
-a[3] => a[3]~0.IN1
-b[0] => b[0]~3.IN1
-b[1] => b[1]~2.IN1
-b[2] => b[2]~1.IN1
-b[3] => b[3]~0.IN1
-cin => cin~0.IN1
-s[0] <= FA:fa0.port3
-s[1] <= FA:fa1.port3
-s[2] <= FA:fa2.port3
-s[3] <= FA:fa3.port3
-cout <= FA:fa3.port4
-
-
-|main|Subtractor:u2|RippieAdder:comb_8|FA:fa0
-x => co~2.IN0
-x => co~0.IN0
-x => s~7.IN0
-x => s~3.IN0
-y => co~2.IN1
-y => co~0.IN1
-y => s~4.IN0
-y => s~1.IN0
-y => s~0.IN0
-y => s~5.IN0
-cin => co~1.IN0
+|EightbitLAAdder|SuperAdder:comb_5
+a[0] => s~7.IN0
+a[0] => P~6.IN0
+a[0] => G[0].IN0
+a[0] => s~3.IN0
+a[0] => P~7.IN0
+a[1] => s~16.IN0
+a[1] => P~4.IN0
+a[1] => G[1].IN0
+a[1] => s~12.IN0
+a[1] => P~5.IN0
+a[2] => s~25.IN0
+a[2] => P~2.IN0
+a[2] => G[2].IN0
+a[2] => s~21.IN0
+a[2] => P~3.IN0
+a[3] => s~34.IN0
+a[3] => P~0.IN0
+a[3] => G[3].IN0
+a[3] => P~1.IN0
+a[3] => s~30.IN0
+b[0] => s~4.IN0
+b[0] => s~1.IN0
+b[0] => P~7.IN1
+b[0] => G[0].IN1
+b[0] => s~0.IN0
+b[0] => s~5.IN0
+b[0] => P~6.IN1
+b[1] => s~13.IN0
+b[1] => s~10.IN0
+b[1] => P~5.IN1
+b[1] => G[1].IN1
+b[1] => s~9.IN0
+b[1] => s~14.IN0
+b[1] => P~4.IN1
+b[2] => s~22.IN0
+b[2] => s~19.IN0
+b[2] => P~3.IN1
+b[2] => G[2].IN1
+b[2] => s~18.IN0
+b[2] => s~23.IN0
+b[2] => P~2.IN1
+b[3] => s~31.IN0
+b[3] => s~28.IN0
+b[3] => P~1.IN1
+b[3] => G[3].IN1
+b[3] => P~0.IN1
+b[3] => s~27.IN0
+b[3] => s~32.IN0
 cin => s~4.IN1
 cin => s~0.IN1
+cin => c0.IN0
+cin => WideAnd5.IN0
+cin => WideAnd3.IN0
+cin => WideAnd0.IN0
 cin => s~1.IN1
 cin => s~5.IN1
-s <= s~8.DB_MAX_OUTPUT_PORT_TYPE
-co <= co~3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|Subtractor:u2|RippieAdder:comb_8|FA:fa1
-x => co~2.IN0
-x => co~0.IN0
-x => s~7.IN0
-x => s~3.IN0
-y => co~2.IN1
-y => co~0.IN1
-y => s~4.IN0
-y => s~1.IN0
-y => s~0.IN0
-y => s~5.IN0
-cin => co~1.IN0
-cin => s~4.IN1
-cin => s~0.IN1
-cin => s~1.IN1
-cin => s~5.IN1
-s <= s~8.DB_MAX_OUTPUT_PORT_TYPE
-co <= co~3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|Subtractor:u2|RippieAdder:comb_8|FA:fa2
-x => co~2.IN0
-x => co~0.IN0
-x => s~7.IN0
-x => s~3.IN0
-y => co~2.IN1
-y => co~0.IN1
-y => s~4.IN0
-y => s~1.IN0
-y => s~0.IN0
-y => s~5.IN0
-cin => co~1.IN0
-cin => s~4.IN1
-cin => s~0.IN1
-cin => s~1.IN1
-cin => s~5.IN1
-s <= s~8.DB_MAX_OUTPUT_PORT_TYPE
-co <= co~3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|Subtractor:u2|RippieAdder:comb_8|FA:fa3
-x => co~2.IN0
-x => co~0.IN0
-x => s~7.IN0
-x => s~3.IN0
-y => co~2.IN1
-y => co~0.IN1
-y => s~4.IN0
-y => s~1.IN0
-y => s~0.IN0
-y => s~5.IN0
-cin => co~1.IN0
-cin => s~4.IN1
-cin => s~0.IN1
-cin => s~1.IN1
-cin => s~5.IN1
-s <= s~8.DB_MAX_OUTPUT_PORT_TYPE
-co <= co~3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|Subtractor:u2|RippieAdder:comb_18
-a[0] => a[0]~3.IN1
-a[1] => a[1]~2.IN1
-a[2] => a[2]~1.IN1
-a[3] => a[3]~0.IN1
-b[0] => b[0]~3.IN1
-b[1] => b[1]~2.IN1
-b[2] => b[2]~1.IN1
-b[3] => b[3]~0.IN1
-cin => cin~0.IN1
-s[0] <= FA:fa0.port3
-s[1] <= FA:fa1.port3
-s[2] <= FA:fa2.port3
-s[3] <= FA:fa3.port3
-cout <= FA:fa3.port4
-
-
-|main|Subtractor:u2|RippieAdder:comb_18|FA:fa0
-x => co~2.IN0
-x => co~0.IN0
-x => s~7.IN0
-x => s~3.IN0
-y => co~2.IN1
-y => co~0.IN1
-y => s~4.IN0
-y => s~1.IN0
-y => s~0.IN0
-y => s~5.IN0
-cin => co~1.IN0
-cin => s~4.IN1
-cin => s~0.IN1
-cin => s~1.IN1
-cin => s~5.IN1
-s <= s~8.DB_MAX_OUTPUT_PORT_TYPE
-co <= co~3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|Subtractor:u2|RippieAdder:comb_18|FA:fa1
-x => co~2.IN0
-x => co~0.IN0
-x => s~7.IN0
-x => s~3.IN0
-y => co~2.IN1
-y => co~0.IN1
-y => s~4.IN0
-y => s~1.IN0
-y => s~0.IN0
-y => s~5.IN0
-cin => co~1.IN0
-cin => s~4.IN1
-cin => s~0.IN1
-cin => s~1.IN1
-cin => s~5.IN1
-s <= s~8.DB_MAX_OUTPUT_PORT_TYPE
-co <= co~3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|Subtractor:u2|RippieAdder:comb_18|FA:fa2
-x => co~2.IN0
-x => co~0.IN0
-x => s~7.IN0
-x => s~3.IN0
-y => co~2.IN1
-y => co~0.IN1
-y => s~4.IN0
-y => s~1.IN0
-y => s~0.IN0
-y => s~5.IN0
-cin => co~1.IN0
-cin => s~4.IN1
-cin => s~0.IN1
-cin => s~1.IN1
-cin => s~5.IN1
-s <= s~8.DB_MAX_OUTPUT_PORT_TYPE
-co <= co~3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|Subtractor:u2|RippieAdder:comb_18|FA:fa3
-x => co~2.IN0
-x => co~0.IN0
-x => s~7.IN0
-x => s~3.IN0
-y => co~2.IN1
-y => co~0.IN1
-y => s~4.IN0
-y => s~1.IN0
-y => s~0.IN0
-y => s~5.IN0
-cin => co~1.IN0
-cin => s~4.IN1
-cin => s~0.IN1
-cin => s~1.IN1
-cin => s~5.IN1
-s <= s~8.DB_MAX_OUTPUT_PORT_TYPE
-co <= co~3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|MUX3bit3to1:comb_54
-X[0] => Mux3.IN1
-X[1] => Mux2.IN1
-X[2] => Mux1.IN1
-X[3] => Mux0.IN1
-Y[0] => Mux3.IN2
-Y[1] => Mux2.IN2
-Y[2] => Mux1.IN2
-Y[3] => Mux0.IN2
-Z[0] => Mux3.IN3
-Z[1] => Mux2.IN3
-Z[2] => Mux1.IN3
-Z[3] => Mux0.IN3
-C[0] => Mux3.IN5
-C[0] => Mux2.IN5
-C[0] => Mux1.IN5
-C[0] => Mux0.IN5
-C[1] => Mux3.IN4
-C[1] => Mux2.IN4
-C[1] => Mux1.IN4
-C[1] => Mux0.IN4
-O[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-O[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-O[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-O[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|MUX1bit3to1:comb_55
-X => Mux0.IN1
-Y => Mux0.IN2
-Z => Mux0.IN3
-C[0] => Mux0.IN5
-C[1] => Mux0.IN4
-O <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|translator:t0
-X[0] => H~43.IN0
-X[0] => H~34.IN0
-X[0] => H~31.IN0
-X[0] => H~30.IN0
-X[0] => H~28.IN0
-X[0] => H~25.IN1
-X[0] => H~18.IN0
-X[0] => H~15.IN0
-X[0] => H~6.IN0
-X[0] => H~3.IN0
-X[0] => H~0.IN1
-X[0] => H~8.IN0
-X[0] => H~10.IN0
-X[0] => H~14.IN0
-X[0] => H~22.IN1
-X[0] => H~40.IN0
-X[1] => H~42.IN0
-X[1] => H~36.IN0
-X[1] => H~33.IN1
-X[1] => H~21.IN1
-X[1] => H~17.IN1
-X[1] => H~12.IN0
-X[1] => H~5.IN1
-X[1] => H~24.IN0
-X[1] => H~27.IN1
-X[1] => H~39.IN0
-X[1] => H~46.IN0
-X[2] => H~41.IN0
-X[2] => H~38.IN0
-X[2] => H~17.IN0
-X[2] => H~20.IN0
-X[2] => H~27.IN0
-X[2] => H~45.IN0
-X[3] => H~38.IN1
-X[3] => H~20.IN1
-X[3] => H~5.IN0
-X[3] => H~25.IN0
-X[3] => H~33.IN0
-X[3] => H~41.IN1
-X[3] => H~45.IN1
-H[0] <= H~2.DB_MAX_OUTPUT_PORT_TYPE
-H[1] <= H~9.DB_MAX_OUTPUT_PORT_TYPE
-H[2] <= H~13.DB_MAX_OUTPUT_PORT_TYPE
-H[3] <= H~23.DB_MAX_OUTPUT_PORT_TYPE
-H[4] <= H~29.DB_MAX_OUTPUT_PORT_TYPE
-H[5] <= H~37.DB_MAX_OUTPUT_PORT_TYPE
-H[6] <= H~47.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|translator:t1
-X[0] => H~43.IN0
-X[0] => H~34.IN0
-X[0] => H~31.IN0
-X[0] => H~30.IN0
-X[0] => H~28.IN0
-X[0] => H~25.IN1
-X[0] => H~18.IN0
-X[0] => H~15.IN0
-X[0] => H~6.IN0
-X[0] => H~3.IN0
-X[0] => H~0.IN1
-X[0] => H~8.IN0
-X[0] => H~10.IN0
-X[0] => H~14.IN0
-X[0] => H~22.IN1
-X[0] => H~40.IN0
-X[1] => H~42.IN0
-X[1] => H~36.IN0
-X[1] => H~33.IN1
-X[1] => H~21.IN1
-X[1] => H~17.IN1
-X[1] => H~12.IN0
-X[1] => H~5.IN1
-X[1] => H~24.IN0
-X[1] => H~27.IN1
-X[1] => H~39.IN0
-X[1] => H~46.IN0
-X[2] => H~41.IN0
-X[2] => H~38.IN0
-X[2] => H~17.IN0
-X[2] => H~20.IN0
-X[2] => H~27.IN0
-X[2] => H~45.IN0
-X[3] => H~38.IN1
-X[3] => H~20.IN1
-X[3] => H~5.IN0
-X[3] => H~25.IN0
-X[3] => H~33.IN0
-X[3] => H~41.IN1
-X[3] => H~45.IN1
-H[0] <= H~2.DB_MAX_OUTPUT_PORT_TYPE
-H[1] <= H~9.DB_MAX_OUTPUT_PORT_TYPE
-H[2] <= H~13.DB_MAX_OUTPUT_PORT_TYPE
-H[3] <= H~23.DB_MAX_OUTPUT_PORT_TYPE
-H[4] <= H~29.DB_MAX_OUTPUT_PORT_TYPE
-H[5] <= H~37.DB_MAX_OUTPUT_PORT_TYPE
-H[6] <= H~47.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|translator:t2
-X[0] => H~43.IN0
-X[0] => H~34.IN0
-X[0] => H~31.IN0
-X[0] => H~30.IN0
-X[0] => H~28.IN0
-X[0] => H~25.IN1
-X[0] => H~18.IN0
-X[0] => H~15.IN0
-X[0] => H~6.IN0
-X[0] => H~3.IN0
-X[0] => H~0.IN1
-X[0] => H~8.IN0
-X[0] => H~10.IN0
-X[0] => H~14.IN0
-X[0] => H~22.IN1
-X[0] => H~40.IN0
-X[1] => H~42.IN0
-X[1] => H~36.IN0
-X[1] => H~33.IN1
-X[1] => H~21.IN1
-X[1] => H~17.IN1
-X[1] => H~12.IN0
-X[1] => H~5.IN1
-X[1] => H~24.IN0
-X[1] => H~27.IN1
-X[1] => H~39.IN0
-X[1] => H~46.IN0
-X[2] => H~41.IN0
-X[2] => H~38.IN0
-X[2] => H~17.IN0
-X[2] => H~20.IN0
-X[2] => H~27.IN0
-X[2] => H~45.IN0
-X[3] => H~38.IN1
-X[3] => H~20.IN1
-X[3] => H~5.IN0
-X[3] => H~25.IN0
-X[3] => H~33.IN0
-X[3] => H~41.IN1
-X[3] => H~45.IN1
-H[0] <= H~2.DB_MAX_OUTPUT_PORT_TYPE
-H[1] <= H~9.DB_MAX_OUTPUT_PORT_TYPE
-H[2] <= H~13.DB_MAX_OUTPUT_PORT_TYPE
-H[3] <= H~23.DB_MAX_OUTPUT_PORT_TYPE
-H[4] <= H~29.DB_MAX_OUTPUT_PORT_TYPE
-H[5] <= H~37.DB_MAX_OUTPUT_PORT_TYPE
-H[6] <= H~47.DB_MAX_OUTPUT_PORT_TYPE
+s[0] <= s~8.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= s~17.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= s~26.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= s~35.DB_MAX_OUTPUT_PORT_TYPE
+cout <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 

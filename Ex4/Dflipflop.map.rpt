@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Dflipflop
-Wed May 07 12:39:50 2014
+Sun May 25 11:06:05 2014
 Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
 
 
@@ -41,16 +41,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +------------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 07 12:39:50 2014   ;
+; Analysis & Synthesis Status        ; Successful - Sun May 25 11:06:05 2014   ;
 ; Quartus II Version                 ; 7.2 Build 151 09/26/2007 SJ Web Edition ;
 ; Revision Name                      ; Dflipflop                               ;
-; Top-level Entity Name              ; main                                    ;
+; Top-level Entity Name              ; ShiftRegister                           ;
 ; Family                             ; Cyclone II                              ;
-; Total logic elements               ; 5                                       ;
-;     Total combinational functions  ; 5                                       ;
+; Total logic elements               ; 12                                      ;
+;     Total combinational functions  ; 12                                      ;
 ;     Dedicated logic registers      ; 0                                       ;
 ; Total registers                    ; 0                                       ;
-; Total pins                         ; 96                                      ;
+; Total pins                         ; 6                                       ;
 ; Total virtual pins                 ; 0                                       ;
 ; Total memory bits                  ; 0                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                       ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 ; Option                                                                         ; Setting            ; Default Value      ;
 +--------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                         ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                          ; main               ; Dflipflop          ;
+; Top-level entity name                                                          ; ShiftRegister      ; Dflipflop          ;
 ; Family name                                                                    ; Cyclone II         ; Stratix II         ;
 ; Use Generated Physical Constraints File                                        ; Off                ;                    ;
 ; Use smart compilation                                                          ; Off                ; Off                ;
@@ -125,66 +125,78 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                            ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------+
-; main.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Jason/Documents/Github/Verilog/Ex4/main.v      ;
-; Dflipflop.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Jason/Documents/Github/Verilog/Ex4/Dflipflop.v ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                    ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------+
+; Dflipflop.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Jason/Documents/Github/Verilog/Ex4/Dflipflop.v     ;
+; ShiftRegister.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Jason/Documents/Github/Verilog/Ex4/ShiftRegister.v ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------+
 
 
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Estimated Total logic elements              ; 5      ;
-;                                             ;        ;
-; Total combinational functions               ; 5      ;
-; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 3      ;
-;     -- 3 input functions                    ; 0      ;
-;     -- <=2 input functions                  ; 2      ;
-;                                             ;        ;
-; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 5      ;
-;     -- arithmetic mode                      ; 0      ;
-;                                             ;        ;
-; Total registers                             ; 0      ;
-;     -- Dedicated logic registers            ; 0      ;
-;     -- I/O registers                        ; 0      ;
-;                                             ;        ;
-; I/O pins                                    ; 96     ;
-; Maximum fan-out node                        ; KEY[1] ;
-; Maximum fan-out                             ; 3      ;
-; Total fan-out                               ; 17     ;
-; Average fan-out                             ; 0.17   ;
-+---------------------------------------------+--------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 12    ;
+;                                             ;       ;
+; Total combinational functions               ; 12    ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 8     ;
+;     -- 3 input functions                    ; 4     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 12    ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 6     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 8     ;
+; Total fan-out                               ; 48    ;
+; Average fan-out                             ; 2.67  ;
++---------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                             ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name     ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+--------------+
-; |main                      ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 96   ; 0            ; |main                   ; work         ;
-;    |Dflipflop:comb_65|     ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|Dflipflop:comb_65 ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                 ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
+; |ShiftRegister             ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |ShiftRegister              ; work         ;
+;    |Dflipflop:u0|          ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ShiftRegister|Dflipflop:u0 ; work         ;
+;    |Dflipflop:u1|          ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ShiftRegister|Dflipflop:u1 ; work         ;
+;    |Dflipflop:u2|          ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ShiftRegister|Dflipflop:u2 ; work         ;
+;    |Dflipflop:u3|          ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ShiftRegister|Dflipflop:u3 ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------+
-; Logic Cells Representing Combinational Loops               ;
-+--------------------------------------------------------+---+
-; Logic Cell Name                                        ;   ;
-+--------------------------------------------------------+---+
-; Dflipflop:comb_65|Q~0                                  ;   ;
-; Dflipflop:comb_65|WideNand4~0                          ;   ;
-; Dflipflop:comb_65|WideNand5~0                          ;   ;
-; Number of logic cells representing combinational loops ; 3 ;
-+--------------------------------------------------------+---+
++-------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                ;
++--------------------------------------------------------+----+
+; Logic Cell Name                                        ;    ;
++--------------------------------------------------------+----+
+; Dflipflop:u0|Q~0                                       ;    ;
+; Dflipflop:u1|Q~0                                       ;    ;
+; Dflipflop:u2|Q~0                                       ;    ;
+; Dflipflop:u3|Q~0                                       ;    ;
+; Dflipflop:u0|WideNand4~0                               ;    ;
+; Dflipflop:u0|WideNand5~0                               ;    ;
+; Dflipflop:u1|WideNand4~0                               ;    ;
+; Dflipflop:u1|WideNand5~0                               ;    ;
+; Dflipflop:u2|WideNand4~0                               ;    ;
+; Dflipflop:u2|WideNand5~0                               ;    ;
+; Dflipflop:u3|WideNand4~0                               ;    ;
+; Dflipflop:u3|WideNand5~0                               ;    ;
+; Number of logic cells representing combinational loops ; 12 ;
++--------------------------------------------------------+----+
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -209,7 +221,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 7.2 Build 151 09/26/2007 SJ Web Edition
-    Info: Processing started: Wed May 07 12:39:49 2014
+    Info: Processing started: Sun May 25 11:06:05 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Dflipflop -c Dflipflop
 Warning (10275): Verilog HDL Module Instantiation warning at main.v(31): ignored dangling comma in List of Port Connections
 Info: Found 1 design units, including 1 entities, in source file main.v
@@ -224,127 +236,17 @@ Warning (10275): Verilog HDL Module Instantiation warning at ShiftRegister.v(8):
 Info: Found 1 design units, including 1 entities, in source file ShiftRegister.v
     Info: Found entity 1: ShiftRegister
 Critical Warning (10846): Verilog HDL Instantiation warning at main.v(31): instance has no name
-Info: Elaborating entity "main" for the top level hierarchy
-Warning (10034): Output port "LED[17]" at main.v(12) has no driver
-Warning (10034): Output port "LED[16]" at main.v(12) has no driver
-Warning (10034): Output port "LED[15]" at main.v(12) has no driver
-Warning (10034): Output port "LED[14]" at main.v(12) has no driver
-Warning (10034): Output port "LED[13]" at main.v(12) has no driver
-Warning (10034): Output port "LED[12]" at main.v(12) has no driver
-Warning (10034): Output port "LED[11]" at main.v(12) has no driver
-Warning (10034): Output port "LED[10]" at main.v(12) has no driver
-Warning (10034): Output port "LED[9]" at main.v(12) has no driver
-Warning (10034): Output port "LED[8]" at main.v(12) has no driver
-Warning (10034): Output port "LED[7]" at main.v(12) has no driver
-Warning (10034): Output port "LED[6]" at main.v(12) has no driver
-Warning (10034): Output port "LED[5]" at main.v(12) has no driver
-Warning (10034): Output port "LED[4]" at main.v(12) has no driver
-Warning (10034): Output port "LED[3]" at main.v(12) has no driver
-Warning (10034): Output port "LED[2]" at main.v(12) has no driver
-Warning (10034): Output port "LED[1]" at main.v(12) has no driver
-Info: Elaborating entity "Dflipflop" for hierarchy "Dflipflop:comb_65"
-Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "H0[0]" stuck at VCC
-    Warning (13410): Pin "H0[1]" stuck at VCC
-    Warning (13410): Pin "H0[2]" stuck at VCC
-    Warning (13410): Pin "H0[3]" stuck at VCC
-    Warning (13410): Pin "H0[4]" stuck at VCC
-    Warning (13410): Pin "H0[5]" stuck at VCC
-    Warning (13410): Pin "H0[6]" stuck at VCC
-    Warning (13410): Pin "H1[0]" stuck at VCC
-    Warning (13410): Pin "H1[1]" stuck at VCC
-    Warning (13410): Pin "H1[2]" stuck at VCC
-    Warning (13410): Pin "H1[3]" stuck at VCC
-    Warning (13410): Pin "H1[4]" stuck at VCC
-    Warning (13410): Pin "H1[5]" stuck at VCC
-    Warning (13410): Pin "H1[6]" stuck at VCC
-    Warning (13410): Pin "H2[0]" stuck at VCC
-    Warning (13410): Pin "H2[1]" stuck at VCC
-    Warning (13410): Pin "H2[2]" stuck at VCC
-    Warning (13410): Pin "H2[3]" stuck at VCC
-    Warning (13410): Pin "H2[4]" stuck at VCC
-    Warning (13410): Pin "H2[5]" stuck at VCC
-    Warning (13410): Pin "H2[6]" stuck at VCC
-    Warning (13410): Pin "H3[0]" stuck at VCC
-    Warning (13410): Pin "H3[1]" stuck at VCC
-    Warning (13410): Pin "H3[2]" stuck at VCC
-    Warning (13410): Pin "H3[3]" stuck at VCC
-    Warning (13410): Pin "H3[4]" stuck at VCC
-    Warning (13410): Pin "H3[5]" stuck at VCC
-    Warning (13410): Pin "H3[6]" stuck at VCC
-    Warning (13410): Pin "H4[0]" stuck at VCC
-    Warning (13410): Pin "H4[1]" stuck at VCC
-    Warning (13410): Pin "H4[2]" stuck at VCC
-    Warning (13410): Pin "H4[3]" stuck at VCC
-    Warning (13410): Pin "H4[4]" stuck at VCC
-    Warning (13410): Pin "H4[5]" stuck at VCC
-    Warning (13410): Pin "H4[6]" stuck at VCC
-    Warning (13410): Pin "H5[0]" stuck at VCC
-    Warning (13410): Pin "H5[1]" stuck at VCC
-    Warning (13410): Pin "H5[2]" stuck at VCC
-    Warning (13410): Pin "H5[3]" stuck at VCC
-    Warning (13410): Pin "H5[4]" stuck at VCC
-    Warning (13410): Pin "H5[5]" stuck at VCC
-    Warning (13410): Pin "H5[6]" stuck at VCC
-    Warning (13410): Pin "H6[0]" stuck at VCC
-    Warning (13410): Pin "H6[1]" stuck at VCC
-    Warning (13410): Pin "H6[2]" stuck at VCC
-    Warning (13410): Pin "H6[3]" stuck at VCC
-    Warning (13410): Pin "H6[4]" stuck at VCC
-    Warning (13410): Pin "H6[5]" stuck at VCC
-    Warning (13410): Pin "H6[6]" stuck at VCC
-    Warning (13410): Pin "H7[0]" stuck at VCC
-    Warning (13410): Pin "H7[1]" stuck at VCC
-    Warning (13410): Pin "H7[2]" stuck at VCC
-    Warning (13410): Pin "H7[3]" stuck at VCC
-    Warning (13410): Pin "H7[4]" stuck at VCC
-    Warning (13410): Pin "H7[5]" stuck at VCC
-    Warning (13410): Pin "H7[6]" stuck at VCC
-    Warning (13410): Pin "LED[1]" stuck at GND
-    Warning (13410): Pin "LED[2]" stuck at GND
-    Warning (13410): Pin "LED[3]" stuck at GND
-    Warning (13410): Pin "LED[4]" stuck at GND
-    Warning (13410): Pin "LED[5]" stuck at GND
-    Warning (13410): Pin "LED[6]" stuck at GND
-    Warning (13410): Pin "LED[7]" stuck at GND
-    Warning (13410): Pin "LED[8]" stuck at GND
-    Warning (13410): Pin "LED[9]" stuck at GND
-    Warning (13410): Pin "LED[10]" stuck at GND
-    Warning (13410): Pin "LED[11]" stuck at GND
-    Warning (13410): Pin "LED[12]" stuck at GND
-    Warning (13410): Pin "LED[13]" stuck at GND
-    Warning (13410): Pin "LED[14]" stuck at GND
-    Warning (13410): Pin "LED[15]" stuck at GND
-    Warning (13410): Pin "LED[16]" stuck at GND
-    Warning (13410): Pin "LED[17]" stuck at GND
+Info: Elaborating entity "ShiftRegister" for the top level hierarchy
+Info: Elaborating entity "Dflipflop" for hierarchy "Dflipflop:u0"
 Info: Generated suppressed messages file C:/Users/Jason/Documents/Github/Verilog/Ex4/Dflipflop.map.smsg
-Warning: Design contains 18 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[1]"
-    Warning (15610): No output dependent on input pin "SW[2]"
-    Warning (15610): No output dependent on input pin "SW[3]"
-    Warning (15610): No output dependent on input pin "SW[4]"
-    Warning (15610): No output dependent on input pin "SW[5]"
-    Warning (15610): No output dependent on input pin "SW[6]"
-    Warning (15610): No output dependent on input pin "SW[7]"
-    Warning (15610): No output dependent on input pin "SW[8]"
-    Warning (15610): No output dependent on input pin "SW[9]"
-    Warning (15610): No output dependent on input pin "SW[10]"
-    Warning (15610): No output dependent on input pin "SW[11]"
-    Warning (15610): No output dependent on input pin "SW[12]"
-    Warning (15610): No output dependent on input pin "SW[13]"
-    Warning (15610): No output dependent on input pin "SW[14]"
-    Warning (15610): No output dependent on input pin "SW[15]"
-    Warning (15610): No output dependent on input pin "SW[16]"
-    Warning (15610): No output dependent on input pin "SW[17]"
-    Warning (15610): No output dependent on input pin "KEY[3]"
-Info: Implemented 101 device resources after synthesis - the final resource count might be different
-    Info: Implemented 22 input pins
-    Info: Implemented 74 output pins
-    Info: Implemented 5 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 116 warnings
-    Info: Allocated 196 megabytes of memory during processing
-    Info: Processing ended: Wed May 07 12:39:50 2014
-    Info: Elapsed time: 00:00:01
+Info: Implemented 18 device resources after synthesis - the final resource count might be different
+    Info: Implemented 2 input pins
+    Info: Implemented 4 output pins
+    Info: Implemented 12 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Allocated 195 megabytes of memory during processing
+    Info: Processing ended: Sun May 25 11:06:05 2014
+    Info: Elapsed time: 00:00:00
 
 
 +------------------------------------------+
