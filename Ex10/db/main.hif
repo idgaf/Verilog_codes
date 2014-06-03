@@ -57,18 +57,18 @@ d41d8cd98f0b24e980998ecf8427e
 
 # end
 # entity
-control
+Tx
 # storage
-db|main.(2).cnf
-db|main.(2).cnf
+db|main.(3).cnf
+db|main.(3).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_sensitive
 # source_file
-Control.v
-76c18eb771ae28434f991e269427ce
+Tx.v
+6fa9ab30ca94a215f050f59616d09d49
 7
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -83,7 +83,7 @@ IGNORE_VERILOG_INITIAL_CONSTRUCTS
 OFF
 }
 # hierarchies {
-control:c
+Tx:t
 }
 # lmf
 ..|..|..|..|..|..|altera|72|quartus|lmf|
@@ -103,7 +103,7 @@ ON
 # case_sensitive
 # source_file
 main.v
-45f2b8b250238198382636611db401d
+16458169852dd6586696b04c715e346
 7
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -127,18 +127,18 @@ d41d8cd98f0b24e980998ecf8427e
 
 # end
 # entity
-Tx
+control
 # storage
-db|main.(3).cnf
-db|main.(3).cnf
+db|main.(2).cnf
+db|main.(2).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_sensitive
 # source_file
-Tx.v
-e3a71449cbb5a68381c77cd494b55a4a
+Control.v
+454c16c22d8619b576d1954dae14534
 7
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -153,7 +153,7 @@ IGNORE_VERILOG_INITIAL_CONSTRUCTS
 OFF
 }
 # hierarchies {
-Tx:t
+control:c
 }
 # lmf
 ..|..|..|..|..|..|altera|72|quartus|lmf|

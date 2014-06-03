@@ -1,0 +1,15 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>CUI</sub_system>
+	<file>/quartus/gcl/cui/cui_undo.cpp</file>
+	<line>758</line>
+	<callstack>
+	0x005a5a43:
+	</callstack>
+	<error>this-&gt;m_undo_iter != this-&gt;m_commands.rend()</error>
+	<date>Tue Jun 03 19:32:30 2014</date>
+	<version>Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition</version>
+	<full_error>this-&gt;m_undo_iter != this-&gt;m_commands.rend()
+Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition </full_error>
+</internal_error>
+

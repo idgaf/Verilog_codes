@@ -138,3 +138,5 @@ set_location_assignment PIN_V2 -to SW[17]
 set_location_assignment PIN_C25 -to UART_RX
 set_location_assignment PIN_B25 -to UART_TX
 set_location_assignment PIN_N2 -to sysclk
+set_location_assignment PIN_D25 -to UART2_RX
+set_location_assignment PIN_J22 -to UART2_TX

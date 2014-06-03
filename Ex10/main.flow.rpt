@@ -1,5 +1,5 @@
 Flow report for main
-Tue Jun 03 00:57:13 2014
+Tue Jun 03 20:45:53 2014
 Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +------------------------------------+-----------------------------------------+
-; Flow Status                        ; Successful - Tue Jun 03 00:57:13 2014   ;
+; Flow Status                        ; Successful - Tue Jun 03 20:45:53 2014   ;
 ; Quartus II Version                 ; 7.2 Build 151 09/26/2007 SJ Web Edition ;
 ; Revision Name                      ; main                                    ;
 ; Top-level Entity Name              ; main                                    ;
@@ -45,11 +45,11 @@ applicable agreement for further details.
 ; Device                             ; EP2C35F672C6                            ;
 ; Timing Models                      ; Final                                   ;
 ; Met timing requirements            ; Yes                                     ;
-; Total logic elements               ; 95 / 33,216 ( < 1 % )                   ;
-;     Total combinational functions  ; 76 / 33,216 ( < 1 % )                   ;
-;     Dedicated logic registers      ; 67 / 33,216 ( < 1 % )                   ;
-; Total registers                    ; 67                                      ;
-; Total pins                         ; 99 / 475 ( 21 % )                       ;
+; Total logic elements               ; 91 / 33,216 ( < 1 % )                   ;
+;     Total combinational functions  ; 72 / 33,216 ( < 1 % )                   ;
+;     Dedicated logic registers      ; 65 / 33,216 ( < 1 % )                   ;
+; Total registers                    ; 65                                      ;
+; Total pins                         ; 106 / 475 ( 22 % )                      ;
 ; Total virtual pins                 ; 0                                       ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                     ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                          ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/03/2014 00:57:00 ;
+; Start date & time ; 06/03/2014 20:45:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; main                ;
 +-------------------+---------------------+
@@ -84,11 +84,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ;
 +-------------------------+--------------+-------------------------+
-; Analysis & Synthesis    ; 00:00:02     ; 1.0                     ;
-; Fitter                  ; 00:00:05     ; 1.0                     ;
-; Assembler               ; 00:00:05     ; 1.0                     ;
-; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ;
-; Total                   ; 00:00:12     ; --                      ;
+; Analysis & Synthesis    ; 00:00:03     ; 1.0                     ;
+; Fitter                  ; 00:00:12     ; 1.0                     ;
+; Assembler               ; 00:00:13     ; 1.0                     ;
+; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ;
+; Total                   ; 00:00:29     ; --                      ;
 +-------------------------+--------------+-------------------------+
 
 

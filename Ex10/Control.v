@@ -13,26 +13,26 @@ module control(DataIn,clk,reset,Data,DataInEn,DataEn);
 		begin
 			count<=15;
 			Data<=0;
-			//DataEn<=0;
-			//outready<=0;
+			DataEn<=0;
+			outready<=0;
 		end
 		
 		else if(DataInEn)
 		begin
-				//outready<=1;
-				//data<=DataIn;
+				outready<=1;
+				data<=DataIn;
 		end
 		else if(outready)
 		begin
 			count<=count-1;
 			if(count==0)
 			begin
-				//DataEn<=0;
-				//outready<=0;
+				DataEn<=0;
+				outready<=0;
 			end
 			else
 			begin			
-				//DataEn<=1;
+				DataEn<=1;
 				if(data[7]==1)
 					Data<=data^8'b11111111;
 				else
@@ -41,13 +41,12 @@ module control(DataIn,clk,reset,Data,DataInEn,DataEn);
 			
 		end
 	end
-	
+	/*
 	always@(negedge clk)
 	begin
-		if(reset==0) begin outready<=0;DataEn<=0; end
-		else if(DataInEn) begin outready<=1;DataEn<=1; data<=DataIn; end
-		else if(outready==1&&count==0) begin outready<=0;DataEn<=0; end
-		else if(outready==1&&count!=0) begin DataEn<=1;end
+		if(reset==0) begin outready<=0; end
+		else if(DataInEn) begin outready<=1;data<=DataIn; end
+		else if(outready==1&&count==0) begin outready<=0;end
 	end
-	
+	*/
 endmodule
