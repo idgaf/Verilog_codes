@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 2.371 ns
+Actual Time    : 1.075 ns
 From           : KEY[2]
-To             : FramesyncFSM:comb_79|Count256:u1|count[4]
+To             : FramesyncFSM:comb_94|RecCount[0]
 From Clock     : --
 To Clock       : sysclk
 Failed Paths   : 0
@@ -15,29 +15,19 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 19.657 ns
-From           : FramesyncFSM:comb_79|RecCount[0]
-To             : LED[3]
+Actual Time    : 13.199 ns
+From           : led
+To             : LED[17]
 From Clock     : sysclk
-To Clock       : --
-Failed Paths   : 0
-
-Type           : Worst-case tpd
-Slack          : N/A
-Required Time  : None
-Actual Time    : 9.342 ns
-From           : KEY[2]
-To             : LED[3]
-From Clock     : --
 To Clock       : --
 Failed Paths   : 0
 
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 5.267 ns
+Actual Time    : -0.549 ns
 From           : KEY[2]
-To             : FramesyncFSM:comb_79|RecCount[0]
+To             : FramesyncFSM:comb_94|count[4]
 From Clock     : --
 To Clock       : sysclk
 Failed Paths   : 0
@@ -45,21 +35,11 @@ Failed Paths   : 0
 Type           : Clock Setup: 'sysclk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 57.33 MHz ( period = 17.444 ns )
-From           : FramesyncFSM:comb_79|RecCount[0]
-To             : FrameDataCheck:comb_80|scrambler:U1|regarr[14]
+Actual Time    : 186.78 MHz ( period = 5.354 ns )
+From           : FramesyncFSM:comb_94|inter
+To             : FramesyncFSM:comb_94|State[0]
 From Clock     : sysclk
 To Clock       : sysclk
-Failed Paths   : 0
-
-Type           : Clock Setup: 'KEY[2]'
-Slack          : N/A
-Required Time  : None
-Actual Time    : 154.68 MHz ( period = 6.465 ns )
-From           : FramesyncFSM:comb_79|RecCount[0]
-To             : FramesyncFSM:comb_79|State[1]
-From Clock     : KEY[2]
-To Clock       : KEY[2]
 Failed Paths   : 0
 
 Type           : Clock Setup: 'KEY[0]'
@@ -72,16 +52,6 @@ From Clock     : KEY[0]
 To Clock       : KEY[0]
 Failed Paths   : 0
 
-Type           : Clock Hold: 'sysclk'
-Slack          : Not operational: Clock Skew > Data Delay
-Required Time  : None
-Actual Time    : N/A
-From           : FrameTrans:comb_78|DataIn
-To             : FramesyncFSM:comb_79|DataOut
-From Clock     : sysclk
-To Clock       : sysclk
-Failed Paths   : 39
-
 Type           : Total number of failed paths
 Slack          : 
 Required Time  : 
@@ -90,7 +60,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 39
+Failed Paths   : 0
 
 --------------------------------------------------------------------------------------
 

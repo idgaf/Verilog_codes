@@ -27,18 +27,40 @@ module main(H0,H1,H2,H3,H4,H5,H6,H7,SW,KEY,LED,sysclk);
 	always@(posedge KEY[1]) Mode<=model;
 	wire Reset;	assign Reset=KEY[2];
 	wire [1:0]State;
+	wire DataWrong;
+	wire DataOut;
+	wire DataOutEn;
 	assign LED[1:0]=model;
 	assign LED[2]=DataWrong;
 	assign LED[3]=DataOutEn;
 	assign LED[5:4]=State;
+	
+	reg led;
+	assign LED[17]=led;
+	initial led<=0;
+	always@(posedge inter) led<=~led;
+	
+	reg led2;
+	assign LED[16]=led2;
+	initial led2<=0;
+	always@(posedge S) led2<=~led2;
+	
+	reg led3;
+	assign LED[15]=led3;
+	initial led3<=0;
+	always@(posedge DataIn) led3<=~led3;
 	//DEFINE INPUTS
 	
 	//LINK OUTPUT
 	
 	//PROGRAM START
 	FrameTrans(Reset,sysclk,Mode,Clock,DataIn);
-	FramesyncFSM(Clock,Reset,DataIn,DataOut,DataOutEn,State);
-	FrameDataCheck(Reset, Clock, DataOut, DataOutEn, DataWrong);
+	FramesyncFSM(Clock,Reset,DataIn,DataOut,DataOutEn,State,inter,S);
+	FrameDataCheck(Reset,
+					  Clock,
+					  DataOut,
+					  DataOutEn,
+					  DataWrong);
 	//OUTPUTDISPLAY
 
 endmodule

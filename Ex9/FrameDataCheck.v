@@ -19,9 +19,9 @@ module FrameDataCheck(Reset,
 	
 	assign FrameStart = !DataOutEn & SyncDataInEnTmp;
 	
-	always@(posedge Reset or posedge Clock)
+	always@(negedge Reset or posedge Clock)
 	begin
-		if(Reset == 1'b1)
+		if(Reset == 1'b0)
 		begin
 			SyncDataInEnTmp <= 0;
 			SyncDataInTmp <= 0;

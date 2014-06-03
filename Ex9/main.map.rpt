@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Wed May 28 23:45:03 2014
+Mon Jun 02 21:47:12 2014
 Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
 
 
@@ -12,13 +12,13 @@ Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
   4. Analysis & Synthesis Source Files Read
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
-  7. User-Specified and Inferred Latches
+  7. Registers Removed During Synthesis
   8. General Register Statistics
   9. Inverted Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: FrameTrans:comb_78
- 12. Parameter Settings for User Entity Instance: FrameTrans:comb_78|scrambler:U1
- 13. Parameter Settings for User Entity Instance: FrameDataCheck:comb_80|scrambler:U1
+ 11. Parameter Settings for User Entity Instance: FrameTrans:comb_93
+ 12. Parameter Settings for User Entity Instance: FrameTrans:comb_93|scrambler:U1
+ 13. Parameter Settings for User Entity Instance: FrameDataCheck:comb_95|scrambler:U1
  14. Analysis & Synthesis Messages
  15. Analysis & Synthesis Suppressed Messages
 
@@ -46,15 +46,15 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +------------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 28 23:45:03 2014   ;
+; Analysis & Synthesis Status        ; Successful - Mon Jun 02 21:47:12 2014   ;
 ; Quartus II Version                 ; 7.2 Build 151 09/26/2007 SJ Web Edition ;
 ; Revision Name                      ; main                                    ;
 ; Top-level Entity Name              ; main                                    ;
 ; Family                             ; Cyclone II                              ;
-; Total logic elements               ; 160                                     ;
-;     Total combinational functions  ; 160                                     ;
-;     Dedicated logic registers      ; 101                                     ;
-; Total registers                    ; 101                                     ;
+; Total logic elements               ; 151                                     ;
+;     Total combinational functions  ; 151                                     ;
+;     Dedicated logic registers      ; 111                                     ;
+; Total registers                    ; 111                                     ;
 ; Total pins                         ; 97                                      ;
 ; Total virtual pins                 ; 0                                       ;
 ; Total memory bits                  ; 0                                       ;
@@ -141,7 +141,6 @@ applicable agreement for further details.
 ; FrameTrans.v                     ; yes             ; User Verilog HDL File  ; C:/Users/Jason/Documents/Github/Verilog/Ex9/FrameTrans.v     ;
 ; FramesyncFSM.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Jason/Documents/Github/Verilog/Ex9/FramesyncFSM.v   ;
 ; Probe.v                          ; yes             ; User Verilog HDL File  ; C:/Users/Jason/Documents/Github/Verilog/Ex9/Probe.v          ;
-; count256.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Jason/Documents/Github/Verilog/Ex9/count256.v       ;
 +----------------------------------+-----------------+------------------------+--------------------------------------------------------------+
 
 
@@ -150,27 +149,27 @@ applicable agreement for further details.
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 160    ;
+; Estimated Total logic elements              ; 151    ;
 ;                                             ;        ;
-; Total combinational functions               ; 160    ;
+; Total combinational functions               ; 151    ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 61     ;
-;     -- 3 input functions                    ; 20     ;
+;     -- 4 input functions                    ; 39     ;
+;     -- 3 input functions                    ; 33     ;
 ;     -- <=2 input functions                  ; 79     ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 115    ;
+;     -- normal mode                          ; 106    ;
 ;     -- arithmetic mode                      ; 45     ;
 ;                                             ;        ;
-; Total registers                             ; 101    ;
-;     -- Dedicated logic registers            ; 101    ;
+; Total registers                             ; 111    ;
+;     -- Dedicated logic registers            ; 111    ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
 ; I/O pins                                    ; 97     ;
 ; Maximum fan-out node                        ; KEY[2] ;
-; Maximum fan-out                             ; 88     ;
-; Total fan-out                               ; 799    ;
-; Average fan-out                             ; 2.23   ;
+; Maximum fan-out                             ; 83     ;
+; Total fan-out                               ; 775    ;
+; Average fan-out                             ; 2.16   ;
 +---------------------------------------------+--------+
 
 
@@ -179,33 +178,25 @@ applicable agreement for further details.
 +-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
 ; Compilation Hierarchy Node  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Library Name ;
 +-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
-; |main                       ; 160 (2)           ; 101 (4)      ; 0           ; 0            ; 0       ; 0         ; 97   ; 0            ; |main                                     ; work         ;
-;    |FrameDataCheck:comb_80| ; 17 (1)            ; 18 (3)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|FrameDataCheck:comb_80              ; work         ;
-;       |scrambler:U1|        ; 16 (16)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|FrameDataCheck:comb_80|scrambler:U1 ; work         ;
-;    |FrameTrans:comb_78|     ; 91 (75)           ; 61 (46)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|FrameTrans:comb_78                  ; work         ;
-;       |scrambler:U1|        ; 16 (16)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|FrameTrans:comb_78|scrambler:U1     ; work         ;
-;    |FramesyncFSM:comb_79|   ; 50 (35)           ; 18 (1)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|FramesyncFSM:comb_79                ; work         ;
-;       |Count256:u1|         ; 12 (12)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|FramesyncFSM:comb_79|Count256:u1    ; work         ;
-;       |Probe:u0|            ; 3 (3)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|FramesyncFSM:comb_79|Probe:u0       ; work         ;
+; |main                       ; 151 (5)           ; 111 (7)      ; 0           ; 0            ; 0       ; 0         ; 97   ; 0            ; |main                                     ; work         ;
+;    |FrameDataCheck:comb_95| ; 17 (1)            ; 18 (3)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|FrameDataCheck:comb_95              ; work         ;
+;       |scrambler:U1|        ; 16 (16)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|FrameDataCheck:comb_95|scrambler:U1 ; work         ;
+;    |FrameTrans:comb_93|     ; 91 (75)           ; 61 (46)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|FrameTrans:comb_93                  ; work         ;
+;       |scrambler:U1|        ; 16 (16)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|FrameTrans:comb_93|scrambler:U1     ; work         ;
+;    |FramesyncFSM:comb_94|   ; 38 (35)           ; 25 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|FramesyncFSM:comb_94                ; work         ;
+;       |Probe:u0|            ; 3 (3)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|FramesyncFSM:comb_94|Probe:u0       ; work         ;
 +-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                               ;
-+----------------------------------------------------+-------------------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal                 ; Free of Timing Hazards ;
-+----------------------------------------------------+-------------------------------------+------------------------+
-; FramesyncFSM:comb_79|State[0]                      ; FramesyncFSM:comb_79|State[1]~0     ; yes                    ;
-; FramesyncFSM:comb_79|State[1]                      ; FramesyncFSM:comb_79|State[1]~0     ; yes                    ;
-; FramesyncFSM:comb_79|MissCount[0]                  ; FramesyncFSM:comb_79|MissCount[0]~6 ; yes                    ;
-; FramesyncFSM:comb_79|MissCount[1]                  ; FramesyncFSM:comb_79|MissCount[0]~6 ; yes                    ;
-; FramesyncFSM:comb_79|RecCount[0]                   ; FramesyncFSM:comb_79|RecCount[0]~0  ; yes                    ;
-; FramesyncFSM:comb_79|RecCount[1]                   ; FramesyncFSM:comb_79|RecCount[0]~0  ; yes                    ;
-; FramesyncFSM:comb_79|DataOut                       ; FramesyncFSM:comb_79|Equal4         ; yes                    ;
-; Number of user-specified and inferred latches = 7  ;                                     ;                        ;
-+----------------------------------------------------+-------------------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; FramesyncFSM:comb_94|RecCount[1]      ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -213,12 +204,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 101   ;
+; Total registers                              ; 111   ;
 ; Number of registers using Synchronous Clear  ; 8     ;
 ; Number of registers using Synchronous Load   ; 8     ;
-; Number of registers using Asynchronous Clear ; 80    ;
+; Number of registers using Asynchronous Clear ; 79    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 30    ;
+; Number of registers using Clock Enable       ; 35    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -228,20 +219,20 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------------------+---------+
 ; Inverted Register                              ; Fan out ;
 +------------------------------------------------+---------+
-; FrameDataCheck:comb_80|scrambler:U1|regarr[13] ; 3       ;
-; FrameTrans:comb_78|scrambler:U1|regarr[13]     ; 3       ;
-; FrameDataCheck:comb_80|scrambler:U1|regarr[10] ; 1       ;
-; FrameDataCheck:comb_80|scrambler:U1|regarr[8]  ; 1       ;
-; FrameTrans:comb_78|scrambler:U1|regarr[10]     ; 1       ;
-; FrameDataCheck:comb_80|scrambler:U1|regarr[6]  ; 1       ;
-; FrameTrans:comb_78|scrambler:U1|regarr[8]      ; 1       ;
-; FrameDataCheck:comb_80|scrambler:U1|regarr[5]  ; 1       ;
-; FrameTrans:comb_78|scrambler:U1|regarr[6]      ; 1       ;
-; FrameTrans:comb_78|scrambler:U1|regarr[5]      ; 1       ;
-; FrameDataCheck:comb_80|scrambler:U1|regarr[2]  ; 1       ;
-; FrameDataCheck:comb_80|scrambler:U1|regarr[1]  ; 1       ;
-; FrameTrans:comb_78|scrambler:U1|regarr[2]      ; 1       ;
-; FrameTrans:comb_78|scrambler:U1|regarr[1]      ; 1       ;
+; FrameDataCheck:comb_95|scrambler:U1|regarr[13] ; 3       ;
+; FrameTrans:comb_93|scrambler:U1|regarr[13]     ; 3       ;
+; FrameDataCheck:comb_95|scrambler:U1|regarr[10] ; 1       ;
+; FrameTrans:comb_93|scrambler:U1|regarr[10]     ; 1       ;
+; FrameDataCheck:comb_95|scrambler:U1|regarr[8]  ; 1       ;
+; FrameTrans:comb_93|scrambler:U1|regarr[8]      ; 1       ;
+; FrameDataCheck:comb_95|scrambler:U1|regarr[6]  ; 1       ;
+; FrameDataCheck:comb_95|scrambler:U1|regarr[5]  ; 1       ;
+; FrameTrans:comb_93|scrambler:U1|regarr[6]      ; 1       ;
+; FrameTrans:comb_93|scrambler:U1|regarr[5]      ; 1       ;
+; FrameDataCheck:comb_95|scrambler:U1|regarr[2]  ; 1       ;
+; FrameDataCheck:comb_95|scrambler:U1|regarr[1]  ; 1       ;
+; FrameTrans:comb_93|scrambler:U1|regarr[2]      ; 1       ;
+; FrameTrans:comb_93|scrambler:U1|regarr[1]      ; 1       ;
 ; Total number of inverted registers = 14        ;         ;
 +------------------------------------------------+---------+
 
@@ -251,23 +242,24 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |main|FramesyncFSM:comb_79|Count256:u1|count[4]      ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |main|FrameTrans:comb_78|scrambler:U1|regarr[12]     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |main|FrameDataCheck:comb_80|scrambler:U1|regarr[14] ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |main|FrameTrans:comb_78|StateCnt256[0]              ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |main|FrameTrans:comb_78|scrambler:U1|regarr[13]     ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |main|FrameDataCheck:comb_80|scrambler:U1|regarr[13] ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |main|FramesyncFSM:comb_79|Mux5                      ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |main|FramesyncFSM:comb_79|Mux4                      ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |main|FrameTrans:comb_93|scrambler:U1|regarr[14]     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |main|FrameDataCheck:comb_95|scrambler:U1|regarr[14] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |main|FramesyncFSM:comb_94|count[7]                  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |main|FrameTrans:comb_93|StateCnt256[5]              ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |main|FramesyncFSM:comb_94|MissCount[1]              ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |main|FramesyncFSM:comb_94|RecCount[1]               ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |main|FramesyncFSM:comb_94|State[1]                  ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |main|FrameTrans:comb_93|scrambler:U1|regarr[10]     ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |main|FrameDataCheck:comb_95|scrambler:U1|regarr[8]  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
 +-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: FrameTrans:comb_78 ;
+; Parameter Settings for User Entity Instance: FrameTrans:comb_93 ;
 +-----------------+----------+------------------------------------+
 ; Parameter Name  ; Value    ; Type                               ;
 +-----------------+----------+------------------------------------+
-; DELAY_NUM       ; 99999    ; Signed Integer                     ;
+; DELAY_NUM       ; 100000   ; Signed Integer                     ;
 ; FRAMEHEAD       ; 10011011 ; Unsigned Binary                    ;
 ; FRAMEHEAD_WRONG ; 10001001 ; Unsigned Binary                    ;
 +-----------------+----------+------------------------------------+
@@ -275,7 +267,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: FrameTrans:comb_78|scrambler:U1 ;
+; Parameter Settings for User Entity Instance: FrameTrans:comb_93|scrambler:U1 ;
 +----------------+-----------------+-------------------------------------------+
 ; Parameter Name ; Value           ; Type                                      ;
 +----------------+-----------------+-------------------------------------------+
@@ -285,7 +277,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: FrameDataCheck:comb_80|scrambler:U1 ;
+; Parameter Settings for User Entity Instance: FrameDataCheck:comb_95|scrambler:U1 ;
 +----------------+-----------------+-----------------------------------------------+
 ; Parameter Name ; Value           ; Type                                          ;
 +----------------+-----------------+-----------------------------------------------+
@@ -300,7 +292,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 7.2 Build 151 09/26/2007 SJ Web Edition
-    Info: Processing started: Wed May 28 23:45:02 2014
+    Info: Processing started: Mon Jun 02 21:47:10 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Info: Found 1 design units, including 1 entities, in source file main.v
     Info: Found entity 1: main
@@ -316,14 +308,11 @@ Info: Found 1 design units, including 1 entities, in source file Probe.v
     Info: Found entity 1: Probe
 Info: Found 1 design units, including 1 entities, in source file count256.v
     Info: Found entity 1: Count256
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(39): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(40): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(41): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(57): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(58): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(63): instance has no name
 Info: Elaborating entity "main" for the top level hierarchy
 Warning (10230): Verilog HDL assignment warning at main.v(26): truncated value with size 32 to match size of target (2)
-Warning (10034): Output port "LED[17]" at main.v(13) has no driver
-Warning (10034): Output port "LED[16]" at main.v(13) has no driver
-Warning (10034): Output port "LED[15]" at main.v(13) has no driver
 Warning (10034): Output port "LED[14]" at main.v(13) has no driver
 Warning (10034): Output port "LED[13]" at main.v(13) has no driver
 Warning (10034): Output port "LED[12]" at main.v(13) has no driver
@@ -333,48 +322,23 @@ Warning (10034): Output port "LED[9]" at main.v(13) has no driver
 Warning (10034): Output port "LED[8]" at main.v(13) has no driver
 Warning (10034): Output port "LED[7]" at main.v(13) has no driver
 Warning (10034): Output port "LED[6]" at main.v(13) has no driver
-Info: Elaborating entity "FrameTrans" for hierarchy "FrameTrans:comb_78"
+Info: Elaborating entity "FrameTrans" for hierarchy "FrameTrans:comb_93"
 Warning (10230): Verilog HDL assignment warning at FrameTrans.v(56): truncated value with size 32 to match size of target (8)
 Warning (10230): Verilog HDL assignment warning at FrameTrans.v(58): truncated value with size 32 to match size of target (2)
 Warning (10230): Verilog HDL assignment warning at FrameTrans.v(64): truncated value with size 8 to match size of target (1)
 Warning (10230): Verilog HDL assignment warning at FrameTrans.v(66): truncated value with size 8 to match size of target (1)
-Info: Elaborating entity "scrambler" for hierarchy "FrameTrans:comb_78|scrambler:U1"
-Info: Elaborating entity "FramesyncFSM" for hierarchy "FramesyncFSM:comb_79"
-Warning (10036): Verilog HDL or VHDL warning at FramesyncFSM.v(8): object "Count" assigned a value but never read
-Warning (10230): Verilog HDL assignment warning at FramesyncFSM.v(25): truncated value with size 32 to match size of target (2)
-Warning (10230): Verilog HDL assignment warning at FramesyncFSM.v(28): truncated value with size 32 to match size of target (2)
-Warning (10240): Verilog HDL Always Construct warning at FramesyncFSM.v(20): inferring latch(es) for variable "State", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at FramesyncFSM.v(20): inferring latch(es) for variable "MissCount", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at FramesyncFSM.v(20): inferring latch(es) for variable "RecCount", which holds its previous value in one or more paths through the always construct
-Warning (10235): Verilog HDL Always Construct warning at FramesyncFSM.v(60): variable "DataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10240): Verilog HDL Always Construct warning at FramesyncFSM.v(55): inferring latch(es) for variable "DataOut", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "DataOut" at FramesyncFSM.v(55)
-Info (10041): Inferred latch for "State[0]" at FramesyncFSM.v(20)
-Info (10041): Inferred latch for "State[1]" at FramesyncFSM.v(20)
-Info (10041): Inferred latch for "RecCount[0]" at FramesyncFSM.v(23)
-Info (10041): Inferred latch for "RecCount[1]" at FramesyncFSM.v(23)
-Info (10041): Inferred latch for "MissCount[0]" at FramesyncFSM.v(23)
-Info (10041): Inferred latch for "MissCount[1]" at FramesyncFSM.v(23)
-Info: Elaborating entity "Probe" for hierarchy "FramesyncFSM:comb_79|Probe:u0"
-Info: Elaborating entity "Count256" for hierarchy "FramesyncFSM:comb_79|Count256:u1"
-Warning (10230): Verilog HDL assignment warning at count256.v(12): truncated value with size 32 to match size of target (8)
-Info: Elaborating entity "FrameDataCheck" for hierarchy "FrameDataCheck:comb_80"
+Info: Elaborating entity "scrambler" for hierarchy "FrameTrans:comb_93|scrambler:U1"
+Info: Elaborating entity "FramesyncFSM" for hierarchy "FramesyncFSM:comb_94"
+Warning (10230): Verilog HDL assignment warning at FramesyncFSM.v(25): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at FramesyncFSM.v(46): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at FramesyncFSM.v(67): truncated value with size 32 to match size of target (2)
+Info: Elaborating entity "Probe" for hierarchy "FramesyncFSM:comb_94|Probe:u0"
+Info: Elaborating entity "FrameDataCheck" for hierarchy "FrameDataCheck:comb_95"
 Warning (12020): Port "din" on the entity instantiation of "U1" is connected to a signal of width 32. The formal width of the signal in the module is 1.  Extra bits will be ignored.
 Warning (12020): Port "din" on the entity instantiation of "U1" is connected to a signal of width 32. The formal width of the signal in the module is 1.  Extra bits will be ignored.
-Warning: Latch FramesyncFSM:comb_79|State[1] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal FramesyncFSM:comb_79|State[1]
-Warning: Latch FramesyncFSM:comb_79|MissCount[0] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal FramesyncFSM:comb_79|MissCount[0]
-Warning: Latch FramesyncFSM:comb_79|MissCount[1] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal FramesyncFSM:comb_79|MissCount[0]
-Warning: Latch FramesyncFSM:comb_79|RecCount[0] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal FramesyncFSM:comb_79|RecCount[0]
-Warning: Latch FramesyncFSM:comb_79|RecCount[1] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal FramesyncFSM:comb_79|RecCount[0]
 Info: Registers with preset signals will power-up high
 Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning: Converted presettable and clearable register to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "FramesyncFSM:comb_79|CountEn" converted into equivalent circuit using register "FramesyncFSM:comb_79|CountEn~_emulated" and latch "FramesyncFSM:comb_79|CountEn~latch"
+Warning (14130): Reduced register "FramesyncFSM:comb_94|RecCount[1]" with stuck data_in port to stuck value GND
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "H0[0]" stuck at VCC
     Warning (13410): Pin "H0[1]" stuck at VCC
@@ -441,9 +405,6 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED[12]" stuck at GND
     Warning (13410): Pin "LED[13]" stuck at GND
     Warning (13410): Pin "LED[14]" stuck at GND
-    Warning (13410): Pin "LED[15]" stuck at GND
-    Warning (13410): Pin "LED[16]" stuck at GND
-    Warning (13410): Pin "LED[17]" stuck at GND
 Info: Generated suppressed messages file C:/Users/Jason/Documents/Github/Verilog/Ex9/main.map.smsg
 Warning: Design contains 19 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[0]"
@@ -465,14 +426,14 @@ Warning: Design contains 19 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[16]"
     Warning (15610): No output dependent on input pin "SW[17]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-Info: Implemented 269 device resources after synthesis - the final resource count might be different
+Info: Implemented 261 device resources after synthesis - the final resource count might be different
     Info: Implemented 23 input pins
     Info: Implemented 74 output pins
-    Info: Implemented 172 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 132 warnings
+    Info: Implemented 164 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 109 warnings
     Info: Allocated 201 megabytes of memory during processing
-    Info: Processing ended: Wed May 28 23:45:03 2014
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Mon Jun 02 21:47:12 2014
+    Info: Elapsed time: 00:00:02
 
 
 +------------------------------------------+

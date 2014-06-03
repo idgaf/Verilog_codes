@@ -81,10 +81,10 @@ KEY[2] => Reset.IN3
 KEY[3] => ~NO_FANOUT~
 LED[0] <= model[0].DB_MAX_OUTPUT_PORT_TYPE
 LED[1] <= model[1].DB_MAX_OUTPUT_PORT_TYPE
-LED[2] <= FrameDataCheck:comb_80.port4
+LED[2] <= FrameDataCheck:comb_95.port4
 LED[3] <= DataOutEn.DB_MAX_OUTPUT_PORT_TYPE
-LED[4] <= FramesyncFSM:comb_79.port5
-LED[5] <= FramesyncFSM:comb_79.port5
+LED[4] <= FramesyncFSM:comb_94.port5
+LED[5] <= FramesyncFSM:comb_94.port5
 LED[6] <= <GND>
 LED[7] <= <GND>
 LED[8] <= <GND>
@@ -94,13 +94,13 @@ LED[11] <= <GND>
 LED[12] <= <GND>
 LED[13] <= <GND>
 LED[14] <= <GND>
-LED[15] <= <GND>
-LED[16] <= <GND>
-LED[17] <= <GND>
+LED[15] <= led3.DB_MAX_OUTPUT_PORT_TYPE
+LED[16] <= led2.DB_MAX_OUTPUT_PORT_TYPE
+LED[17] <= led.DB_MAX_OUTPUT_PORT_TYPE
 sysclk => sysclk~0.IN1
 
 
-|main|FrameTrans:comb_78
+|main|FrameTrans:comb_93
 Reset => Reset~0.IN1
 Clock100M => Counter[31].CLK
 Clock100M => Counter[30].CLK
@@ -145,7 +145,7 @@ Clock <= Clk_10ms~1.DB_MAX_OUTPUT_PORT_TYPE
 DataIn <= DataIn~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|FrameTrans:comb_78|scrambler:U1
+|main|FrameTrans:comb_93|scrambler:U1
 clk => regarr[14].CLK
 clk => regarr[13].CLK
 clk => regarr[12].CLK
@@ -215,24 +215,32 @@ dout <= dout~1.DB_MAX_OUTPUT_PORT_TYPE
 scramb_out_en <= scramb_out_en~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|FramesyncFSM:comb_79
-clk => clk~0.IN2
-rst => CountEn~1.IN1
-rst => MissCount[1].ACLR
-rst => MissCount[0].ACLR
-rst => RecCount[1].ACLR
-rst => RecCount[0].ACLR
-rst => State[0]$latch.ACLR
-rst => State[1]$latch.ACLR
-rst => CountEn.ACLR
+|main|FramesyncFSM:comb_94
+clk => clk~0.IN1
+rst => State~0.OUTPUTSELECT
+rst => State~1.OUTPUTSELECT
+rst => MissCount~0.OUTPUTSELECT
+rst => MissCount~1.OUTPUTSELECT
+rst => RecCount~0.OUTPUTSELECT
+rst => RecCount~1.OUTPUTSELECT
+rst => count~23.OUTPUTSELECT
+rst => count~22.OUTPUTSELECT
+rst => count~21.OUTPUTSELECT
+rst => count~20.OUTPUTSELECT
+rst => count~19.OUTPUTSELECT
+rst => count~18.OUTPUTSELECT
+rst => count~17.OUTPUTSELECT
+rst => count~16.OUTPUTSELECT
 DataIn => DataIn~0.IN1
-DataOut <= DataOut$latch.DB_MAX_OUTPUT_PORT_TYPE
-DataOutEn <= Equal4.DB_MAX_OUTPUT_PORT_TYPE
-State[0] <= State[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
-State[1] <= State[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+DataOut <= DataOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DataOutEn <= DataOutEn~reg0.DB_MAX_OUTPUT_PORT_TYPE
+State[0] <= State[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+State[1] <= State[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inter <= inter~reg0.DB_MAX_OUTPUT_PORT_TYPE
+S <= Probe:u0.port1
 
 
-|main|FramesyncFSM:comb_79|Probe:u0
+|main|FramesyncFSM:comb_94|Probe:u0
 D => temp[0].DATAIN
 D => always0~0.IN0
 S <= S~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -246,28 +254,7 @@ clk => temp[0].CLK
 clk => S~reg0.CLK
 
 
-|main|FramesyncFSM:comb_79|Count256:u1
-clk => inter~reg0.CLK
-clk => count[7].CLK
-clk => count[6].CLK
-clk => count[5].CLK
-clk => count[4].CLK
-clk => count[3].CLK
-clk => count[2].CLK
-clk => count[1].CLK
-clk => count[0].CLK
-enable => count~7.OUTPUTSELECT
-enable => count~6.OUTPUTSELECT
-enable => count~5.OUTPUTSELECT
-enable => count~4.OUTPUTSELECT
-enable => count~3.OUTPUTSELECT
-enable => count~2.OUTPUTSELECT
-enable => count~1.OUTPUTSELECT
-enable => count~0.OUTPUTSELECT
-inter <= inter~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|FrameDataCheck:comb_80
+|main|FrameDataCheck:comb_95
 Reset => Reset~0.IN1
 Clock => Clock~0.IN1
 DataOut => SyncDataInTmp.DATAIN
@@ -275,7 +262,7 @@ DataOutEn => DataOutEn~0.IN1
 DataWrong <= DataWrong~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|FrameDataCheck:comb_80|scrambler:U1
+|main|FrameDataCheck:comb_95|scrambler:U1
 clk => regarr[14].CLK
 clk => regarr[13].CLK
 clk => regarr[12].CLK
