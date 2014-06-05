@@ -166,55 +166,6 @@ d41d8cd98f0b24e980998ecf8427e
 
 # end
 # entity
-FrameTrans
-# storage
-db|main.(1).cnf
-db|main.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-FrameTrans.v
-b7f53dabd8743e06ca907da89453ec
-7
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-}
-# user_parameter {
-DELAY_NUM
-100000
-PARAMETER_SIGNED_DEC
-DEF
-FRAMEHEAD
-10011011
-PARAMETER_UNSIGNED_BIN
-DEF
-FRAMEHEAD_WRONG
-10001001
-PARAMETER_UNSIGNED_BIN
-DEF
-}
-# hierarchies {
-FrameTrans:comb_93
-}
-# lmf
-..|..|..|..|..|..|altera|72|quartus|lmf|
-d41d8cd98f0b24e980998ecf8427e
-# macro_sequence
-
-# end
-# entity
 FrameDataCheck
 # storage
 db|main.(5).cnf
@@ -277,6 +228,55 @@ OFF
 }
 # hierarchies {
 FramesyncFSM:comb_94
+}
+# lmf
+..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+FrameTrans
+# storage
+db|main.(1).cnf
+db|main.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+FrameTrans.v
+ccf1588df5666565c956a7d18e97b020
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# user_parameter {
+DELAY_NUM
+5
+PARAMETER_SIGNED_DEC
+DEF
+FRAMEHEAD
+10011011
+PARAMETER_UNSIGNED_BIN
+DEF
+FRAMEHEAD_WRONG
+10001001
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# hierarchies {
+FrameTrans:comb_93
 }
 # lmf
 ..|..|..|..|..|..|altera|72|quartus|lmf|

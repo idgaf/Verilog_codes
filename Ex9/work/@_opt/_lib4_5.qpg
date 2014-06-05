@@ -1,0 +1,174 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dC:/modeltech64_10.2c/examples/test
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1401953951
+VmHY`?KkQ@Vo0?CLDiO9IT2
+Z1 04 9 4 work testbench fast 0
+=4-0021ccc23286-53901e9f-24c-1c9c
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+Z2 OL;O;10.2c;57
+T_opt1
+VdkoHCm[U<:^[JdB@<=fQk0
+R1
+=23-0021ccc23286-538c2c53-15b-2cc0
+o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt1
+R2
+Z3 dC:/modeltech64_10.2c/examples/test
+!s110 1401695315
+vCount256
+INiAda0QWobHPmhGmP1HR63
+Z4 V`JN@9S9cnhjKRR_L]QIcM3
+Z5 dC:/Users/Jason/Documents/Github/Verilog/Ex9
+w1401285238
+8C:/Users/Jason/Documents/Github/Verilog/Ex9/count256.v
+FC:/Users/Jason/Documents/Github/Verilog/Ex9/count256.v
+L0 1
+Z6 OL;L;10.2c;57
+r1
+31
+Z7 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+n@count256
+Z8 !s110 1401953921
+!s100 mLXSRD8;j8DO3k1n=AGXO2
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/Jason/Documents/Github/Verilog/Ex9/count256.v|
+!s108 1401953921.466000
+!s107 C:/Users/Jason/Documents/Github/Verilog/Ex9/count256.v|
+!i10b 1
+!s85 0
+!i111 0
+vFrameDataCheck
+R8
+IcTd4BiY8l=PoQe5Z_4D3c0
+R4
+R5
+w1401716326
+8C:/Users/Jason/Documents/Github/Verilog/Ex9/FrameDataCheck.v
+FC:/Users/Jason/Documents/Github/Verilog/Ex9/FrameDataCheck.v
+L0 1
+R6
+r1
+31
+R7
+n@frame@data@check
+!s100 <?AKCYekIffkcT0>[@IER1
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/Jason/Documents/Github/Verilog/Ex9/FrameDataCheck.v|
+!s108 1401953921.534000
+!s107 C:/Users/Jason/Documents/Github/Verilog/Ex9/FrameDataCheck.v|
+!i10b 1
+!s85 0
+!i111 0
+vFramesyncFSM
+R8
+IeC<Y>zciYHckXOVJAEFT]2
+R4
+R5
+w1401716775
+8C:/Users/Jason/Documents/Github/Verilog/Ex9/FramesyncFSM.v
+FC:/Users/Jason/Documents/Github/Verilog/Ex9/FramesyncFSM.v
+L0 1
+R6
+r1
+31
+R7
+n@framesync@f@s@m
+!s100 5nRO0EZb^Zk<@^X<nn^3d3
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/Jason/Documents/Github/Verilog/Ex9/FramesyncFSM.v|
+!s108 1401953921.603000
+!s107 C:/Users/Jason/Documents/Github/Verilog/Ex9/FramesyncFSM.v|
+!i10b 1
+!s85 0
+!i111 0
+vFrameTrans
+R8
+IYOQ?63m<D_JYXk62]izT23
+R4
+R5
+w1401953919
+8C:/Users/Jason/Documents/Github/Verilog/Ex9/FrameTrans.v
+FC:/Users/Jason/Documents/Github/Verilog/Ex9/FrameTrans.v
+L0 1
+R6
+r1
+31
+R7
+n@frame@trans
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/Jason/Documents/Github/Verilog/Ex9/FrameTrans.v|
+!s100 _OhQ^EgdC3_ID<gDa;gXZ2
+!s108 1401953921.665000
+!s107 C:/Users/Jason/Documents/Github/Verilog/Ex9/FrameTrans.v|
+!i10b 1
+!s85 0
+!i111 0
+vProbe
+R8
+I^6:D@1QIzf[VU41O7Eh`52
+R4
+R5
+w1401290671
+8C:/Users/Jason/Documents/Github/Verilog/Ex9/Probe.v
+FC:/Users/Jason/Documents/Github/Verilog/Ex9/Probe.v
+L0 1
+R6
+r1
+31
+R7
+n@probe
+!s100 Af<><o[><D]550gz_HL5L0
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/Jason/Documents/Github/Verilog/Ex9/Probe.v|
+!s108 1401953921.733000
+!s107 C:/Users/Jason/Documents/Github/Verilog/Ex9/Probe.v|
+!i10b 1
+!s85 0
+!i111 0
+vscrambler
+R8
+IiCTD498kTIzgMgCFdbQNM3
+R4
+R5
+w1401086536
+8C:/Users/Jason/Documents/Github/Verilog/Ex9/scrambler.v
+FC:/Users/Jason/Documents/Github/Verilog/Ex9/scrambler.v
+L0 2
+R6
+r1
+31
+R7
+!s100 F1KK5EYMP8mVUIb9J:bB12
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/Jason/Documents/Github/Verilog/Ex9/scrambler.v|
+!s108 1401953921.798000
+!s107 C:/Users/Jason/Documents/Github/Verilog/Ex9/scrambler.v|
+!i10b 1
+!s85 0
+!i111 0
+vtestbench
+R8
+INfN?3l7^bPlL`aC[dSi<C2
+R4
+R5
+w1401694947
+8C:/Users/Jason/Documents/Github/Verilog/Ex9/testbench.v
+FC:/Users/Jason/Documents/Github/Verilog/Ex9/testbench.v
+L0 1
+R6
+r1
+31
+R7
+!s100 BNA8kBgZ;hljC4la[<7_03
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/Jason/Documents/Github/Verilog/Ex9/testbench.v|
+!i10b 1
+!s85 0
+!s108 1401953921.865000
+!s107 C:/Users/Jason/Documents/Github/Verilog/Ex9/testbench.v|
+!i111 0
+bench.v|
+!i111 0

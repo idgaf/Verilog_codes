@@ -26,6 +26,7 @@ module main(H0,H1,H2,H3,H4,H5,H6,H7,SW,KEY,LED,sysclk,UART_TX,UART_RX,UART2_TX,U
 	assign H5=7'b1111111;
 	assign H6=7'b1111111;
 	assign H7=7'b1111111;
+	assign GPIO[0]=0;
 	
 
 	wire datain,reset;

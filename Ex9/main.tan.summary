@@ -5,7 +5,7 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 1.075 ns
+Actual Time    : 2.127 ns
 From           : KEY[2]
 To             : FramesyncFSM:comb_94|RecCount[0]
 From Clock     : --
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 13.199 ns
-From           : led
-To             : LED[17]
+Actual Time    : 12.124 ns
+From           : led2
+To             : LED[16]
 From Clock     : sysclk
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -0.549 ns
+Actual Time    : -1.702 ns
 From           : KEY[2]
-To             : FramesyncFSM:comb_94|count[4]
+To             : FramesyncFSM:comb_94|count[0]
 From Clock     : --
 To Clock       : sysclk
 Failed Paths   : 0
@@ -35,8 +35,8 @@ Failed Paths   : 0
 Type           : Clock Setup: 'sysclk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 186.78 MHz ( period = 5.354 ns )
-From           : FramesyncFSM:comb_94|inter
+Actual Time    : 145.31 MHz ( period = 6.882 ns )
+From           : FramesyncFSM:comb_94|Probe:u0|S
 To             : FramesyncFSM:comb_94|State[0]
 From Clock     : sysclk
 To Clock       : sysclk

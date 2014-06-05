@@ -1,9 +1,23 @@
-C:/Users/Jason/Documents/Github/Verilog/Ex9/count256.v {1 {vlog -work work -vopt C:/Users/Jason/Documents/Github/Verilog/Ex9/count256.v
+C:/Users/Jason/Documents/Github/Verilog/Ex9/FramesyncFSM.v {1 {vlog -work work -vopt C:/Users/Jason/Documents/Github/Verilog/Ex9/FramesyncFSM.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module FramesyncFSM
+
+Top level modules:
+	FramesyncFSM
+
+} {} {}} C:/Users/Jason/Documents/Github/Verilog/Ex9/count256.v {1 {vlog -work work -vopt C:/Users/Jason/Documents/Github/Verilog/Ex9/count256.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 -- Compiling module Count256
 
 Top level modules:
 	Count256
+
+} {} {}} C:/Users/Jason/Documents/Github/Verilog/Ex9/FrameDataCheck.v {1 {vlog -work work -vopt C:/Users/Jason/Documents/Github/Verilog/Ex9/FrameDataCheck.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module FrameDataCheck
+
+Top level modules:
+	FrameDataCheck
 
 } {} {}} C:/Users/Jason/Documents/Github/Verilog/Ex9/scrambler.v {1 {vlog -work work -vopt C:/Users/Jason/Documents/Github/Verilog/Ex9/scrambler.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
@@ -12,18 +26,18 @@ Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 Top level modules:
 	scrambler
 
-} {} {}} C:/Users/Jason/Documents/Github/Verilog/Ex9/testbench.v {1 {vlog -work work -vopt C:/Users/Jason/Documents/Github/Verilog/Ex9/testbench.v
-Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module testbench
-
-Top level modules:
-	testbench
-
 } {} {}} C:/Users/Jason/Documents/Github/Verilog/Ex9/Probe.v {1 {vlog -work work -vopt C:/Users/Jason/Documents/Github/Verilog/Ex9/Probe.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 -- Compiling module Probe
 
 Top level modules:
 	Probe
+
+} {} {}} C:/Users/Jason/Documents/Github/Verilog/Ex9/testbench.v {1 {vlog -work work -vopt C:/Users/Jason/Documents/Github/Verilog/Ex9/testbench.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module testbench
+
+Top level modules:
+	testbench
 
 } {} {}}

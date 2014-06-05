@@ -72,7 +72,7 @@ module main(H0,H1,H2,H3,H4,H5,H6,H7,SW,KEY,LED,sysclk,UART_TX,UART_RX,UART2_TX,U
 	//Rx(DataIn,Data,reset,clk,DataEn);
 	control c(w3,my_clk,reset,w4,w1,w2);
 	//control(DataIn,clk,reset,Data,DataInEn,DataEn);
-	Tx t(w3,w1,dataout,d,reset,my_clk);
+	Tx t(w4,w2,dataout,d,reset,my_clk);
 	//Tx(DataIn,DataInEn,DataOut,reset,clk);
 	//DEFINE INPUTS
 	

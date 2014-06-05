@@ -1,5 +1,5 @@
 Assembler report for main
-Tue Jun 03 20:45:51 2014
+Thu Jun 05 16:17:05 2014
 Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Jun 03 20:45:51 2014 ;
+; Assembler Status      ; Successful - Thu Jun 05 16:17:05 2014 ;
 ; Revision Name         ; main                                  ;
 ; Top-level Entity Name ; main                                  ;
 ; Family                ; Cyclone II                            ;
@@ -117,13 +117,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 7.2 Build 151 09/26/2007 SJ Web Edition
-    Info: Processing started: Tue Jun 03 20:45:38 2014
+    Info: Processing started: Thu Jun 05 16:17:00 2014
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off main -c main
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Allocated 254 megabytes of memory during processing
-    Info: Processing ended: Tue Jun 03 20:45:51 2014
-    Info: Elapsed time: 00:00:13
+    Info: Processing ended: Thu Jun 05 16:17:05 2014
+    Info: Elapsed time: 00:00:05
 
 

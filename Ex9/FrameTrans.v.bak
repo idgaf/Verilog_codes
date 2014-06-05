@@ -15,7 +15,7 @@ module FrameTrans(Reset,Clock100M,Mode,Clock,DataIn);
 	
 	wire	   ScrambOut;
 	
-	parameter  DELAY_NUM = 10000;
+	parameter  DELAY_NUM = 100000;
 	parameter  FRAMEHEAD = 8'b1001_1011;
 	parameter  FRAMEHEAD_WRONG = 8'b1000_1001;	
 	assign Clock = Clk_10ms;
